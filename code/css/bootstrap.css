@@ -280,8 +280,8 @@ hr {
   clear: both;
 }
 .row {
-  margin-left: -15px;
-  margin-right: -15px;
+  /* margin-left: -15px;
+  margin-right: -15px; */
 }
 .row:before,
 .row:after {

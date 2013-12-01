@@ -1,4 +1,4 @@
-html{
+html, .bg{
     background: #f8f8f3;
 }
 
@@ -12,6 +12,10 @@ a.border:hover{
     transition: .2xs ease-in-out;
     -moz-transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
+}
+
+div.row{
+    overflow-x:hidden; 
 }
 
 a:hover{
@@ -103,6 +107,13 @@ p.txt{
     margin-left:95px;
 }
 
+p.txtinvert{
+    font-family: 'Varela Round', sans-serif;
+    color:#282828;
+    margin-left:95px;
+    font-size:16px;
+}
+
 p.headline{
     font-size:46px;
     margin-left:95px;
@@ -166,7 +177,7 @@ span.italic{
         text-transform:uppercase;
     }
 
-    p.txt{
+    p.txt, p.txtinvert{
         margin-left:40px;
     }
 

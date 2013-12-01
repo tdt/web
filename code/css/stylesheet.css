@@ -1,5 +1,4 @@
 html{
-    font-family: 'Varela Round', sans-serif;
     background: #f8f8f3;
 }
 
@@ -9,7 +8,7 @@ a{
 }
 
 a.border:hover{
-     border-color:#36ab70;
+    border-color:#36ab70;
     transition: .2xs ease-in-out;
     -moz-transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
@@ -18,6 +17,9 @@ a.border:hover{
 a:hover{
     color:#36ab70;
     text-decoration:none;
+    transition: .2xs ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
 }
 
 .container{
@@ -82,6 +84,10 @@ p.nav{
     margin-top:49px;
 }
 
+.special{
+    margin-left:40%   
+}
+
 a.border{
     padding:17px 17px 17px 17px;
     -webkit-border-radius: 5px;
@@ -91,13 +97,54 @@ a.border{
     border: solid 1px;
 }
 
-p.headline{
-    font-size:46px;
+p.txt{
     font-family: 'Varela Round', sans-serif;
     color:white;
     margin-left:95px;
+}
+
+p.headline{
+    font-size:46px;
+    margin-left:95px;
     margin-top:150px;
     text-transform:uppercase;
+    margin-bottom:0px;
+}
+
+p.tagline{
+    font-size:22px;
+    font-weight:300;
+    margin: 0 0 40px 95px;
+}
+
+a.button{
+    font-size:16px;
+    text-transform:uppercase;
+    background:#36ab70;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+    margin: 0px 40px 0px 95px;
+    padding: 16px 28px 16px 28px;
+    width:163px;
+}
+
+a.button:hover{
+    background:#b1bfc4; 
+    color:white;
+    transition: .2xs ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    cursor:pointer;
+}
+
+p.quote{
+    font-size:14px;
+    margin-top:60px;
+}
+
+span.italic{
+    font-style:italic;
 }
 
 @media (max-width: 991px) {
@@ -119,12 +166,24 @@ p.headline{
         text-transform:uppercase;
     }
 
+    p.txt{
+        margin-left:40px;
+    }
+
+    p.tagline{
+        font-size:16px;
+        margin-right:40px;
+    }
+
     p.nav{
         padding-left:40px;
         padding-top:0px;
         padding-bottom:10px;
         margin-top:20px;
         font-size:14px; 
+    }
+    .special{
+        margin-left:0%   
     }
     a.border{
         border:none;
@@ -133,5 +192,9 @@ p.headline{
     }
     div.height{
         height:100px;
+    }
+
+    a.button{
+        margin-left:40px;
     }
 }

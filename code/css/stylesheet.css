@@ -3,11 +3,27 @@ html{
     background: #f8f8f3;
 }
 
+a{
+    text-decoration:none;
+    color:white;
+}
+
+a.border:hover{
+     border-color:#36ab70;
+    transition: .2xs ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+}
+
+a:hover{
+    color:#36ab70;
+    text-decoration:none;
+}
+
 .container{
     padding:0;
     margin:0;
     width:100%;
-    overflow:hidden;
 }
 
 .container #header{
@@ -28,7 +44,7 @@ html{
 }
 
 
-.row{
+.navoverlay{
     background: rgba(23,52,63,0.80);
     overflow: hidden;
     z-index: 3;     
@@ -36,6 +52,10 @@ html{
 
 .logo{
     float:left;   
+}
+
+div.height{
+    height:120px;
 }
 
 img.logo{
@@ -50,12 +70,68 @@ p.logo{
     color:white;
     padding-top:34px;
     padding-left:24px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+p.nav{
+    font-size:16px;
+    text-transform:uppercase;
+    color:white;
+    width:186px;
+    font-family: 'Varela Round', sans-serif;
+    margin-top:49px;
+}
+
+a.border{
+    padding:17px 17px 17px 17px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+    border-color:white;
+    border: solid 1px;
+}
+
+p.headline{
+    font-size:46px;
+    font-family: 'Varela Round', sans-serif;
+    color:white;
+    margin-left:95px;
+    margin-top:150px;
+    text-transform:uppercase;
 }
 
 @media (max-width: 991px) {
-  img.logo{
-    padding-top:29px;
-    padding-bottom:29px;
-    padding-left:40px;
-}  
+    p.logo{
+        font-size:14px;   
+    }
+    img.logo{
+        padding-top:20px;
+        padding-bottom:0px;
+        padding-left:40px;
+    }
+
+    p.headline{
+        font-size:30px;
+        font-family: 'Varela Round', sans-serif;
+        color:white;
+        margin-left:40px;
+        margin-top:60px;
+        text-transform:uppercase;
+    }
+
+    p.nav{
+        padding-left:40px;
+        padding-top:0px;
+        padding-bottom:10px;
+        margin-top:20px;
+        font-size:14px; 
+    }
+    a.border{
+        border:none;
+        padding:0 0 0 0;
+        
+    }
+    div.height{
+        height:100px;
+    }
 }

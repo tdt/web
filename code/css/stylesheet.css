@@ -110,8 +110,7 @@ p.txt{
 p.txtinvert{
     font-family: 'Varela Round', sans-serif;
     color:#282828;
-    margin-left:95px;
-    font-size:16px;
+    font-size:18px;
 }
 
 p.headline{
@@ -154,8 +153,34 @@ p.quote{
     margin-top:60px;
 }
 
-span.italic{
+.italic{
     font-style:italic;
+}
+
+table{
+    width:60%;
+    max-width:500px;
+    margin:auto;
+    font-family: 'Varela Round', sans-serif;
+    font-size:18px;
+    float:right;
+}
+
+table.tableinvert{
+    float:left;   
+}
+
+
+div.margintop{
+    margin-top:10px;   
+}
+
+p.tabletitle{
+    text-align:left;   
+}
+
+img.checkmark{
+    padding: 4px 10px 4px 10px;   
 }
 
 @media (max-width: 991px) {
@@ -177,7 +202,7 @@ span.italic{
         text-transform:uppercase;
     }
 
-    p.txt, p.txtinvert{
+    p.txt{
         margin-left:40px;
     }
 
@@ -207,5 +232,11 @@ span.italic{
 
     a.button{
         margin-left:40px;
+    }
+
+    table{
+        float:left;
+        margin-left:40px;
+        width:70%
     }
 }

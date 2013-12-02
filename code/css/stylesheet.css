@@ -42,6 +42,16 @@ a:hover{
     background-size: cover;
 }
 
+.container #whowhat{
+    width:auto;
+    height:590px;
+    background: url(../images/whowhat.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .overlay{
     background: rgba(23,52,63,0.75);
     overflow: hidden;
@@ -189,7 +199,7 @@ p.mrgn{
     margin:auto;
     margin-top:20px;
     line-height:32px;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 img.quote{

@@ -216,9 +216,50 @@ p.mrgn{
     margin-bottom:30px;
 }
 
+p.mrgn-2{
+    max-width:200px;
+    margin-top:20px;
+    line-height:32px;
+    margin-bottom:20px;
+}
+
 img.quote{
     margin-left:-70px;
     margin-right:33px;
+}
+
+p.center{
+    font-size:18px;
+    text-align:center;
+    margin-top:24px;
+}
+
+img.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:170px;
+}
+
+img.right{
+    float:right;  
+    margin-right:40px;
+}
+
+img.left{
+    margin-left:40px;   
+}
+
+p.right{
+    float:right;
+}
+
+p.cntr{
+    margin: 20px auto;
+}
+
+p.left{
+    margin-left:40px;
 }
 
 @media (max-width: 991px) {
@@ -298,5 +339,40 @@ img.quote{
     p.whowhat{
         font-size:16px;
         margin-right:40px;
+    }
+
+    img.right, img.center, img.left{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height:170px;
+        float:none;
+        margin-bottom:20px;
+    }
+
+    p.mrgn-2{
+        max-width:200px;
+        margin-top:20px;
+        line-height:32px;
+        margin-bottom:20px;
+    }
+
+    p.right{
+        float:none;
+        margin-left:40px;
+        margin-right:40px;
+        max-width:100%
+    }
+    
+    p.cntr{
+        margin-left:40px;
+        margin-right:40px;
+        max-width:100%
+    }
+    
+    p.left{
+        margin-left:40px;
+        margin-right:40px;
+        max-width:100%
     }
 }

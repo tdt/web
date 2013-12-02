@@ -183,6 +183,20 @@ img.checkmark{
     padding: 4px 10px 4px 10px;   
 }
 
+p.mrgn{
+    margin-left:95px;
+    max-width:620px;
+    margin:auto;
+    margin-top:20px;
+    line-height:32px;
+    margin-bottom:20px;
+}
+
+img.quote{
+    margin-left:-70px;
+    margin-right:33px;
+}
+
 @media (max-width: 991px) {
     p.logo{
         font-size:14px;   
@@ -238,5 +252,16 @@ img.checkmark{
         float:left;
         margin-left:40px;
         width:70%
+    }
+
+    p.mrgn{
+        float:left;
+        margin-left:40px;
+        margin-right:40px;
+    }
+
+    img.quote{
+        margin-left:0px;
+        margin-right:12px;
     }
 }

@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+
+
+<!--
+
+TO DO
+* Background transparent compatability;
+* Scroll to learn more button
+* Check form input:active? (does css exist in this case?)
+* Welke contactinformatie op de website?
+* PHP form 
+
+-->
+
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -13,6 +26,8 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 </head>
 <body>
     <div class="container">
@@ -28,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs">
-                        <p class="txt headline">The Datatank</p>
+                        <p class="txt headline margin-1">The Datatank</p>
                         <p class="txt tagline">We're taking it to the next level. New version. Professional support.</p>
                         <a class="txt button" href="#">Learn more</a>
                         <p class="txt quote">
@@ -89,7 +104,7 @@
         </div>
         <div id="whowhat">
             <div class="overlay">
-                <p class="txt headline-2">Who &amp; What</p>
+                <p class="txt headline margin-2">Who &amp; What</p>
                 <p class="txt whowhat">The DataTank is a RESTful data mangement system written in PHP5. It's ready to be your customised datahub inside your organisation. The software is managed by OKFN Belgium.</p>
                 
                 <p class="txt whowhat">A professional service is guaranteed by our core team of developers. To help us lifting The DataTank to the next level, join our user group of enthiusiasts who meet every two months to decide the next priorities of The DataTank development.</p><br/>
@@ -125,6 +140,35 @@
                     <p class="txtinvert mrgn-2 left"><img src="images/quote.png" alt="quote" class="quote"/>The Datatank grows with your open data experience.
                     Introducing it in your company helps you 
                     to take next steps to more usable data.<br><span class="italic">- Bart Rosseau, OKFN</span></p>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="overlay">
+                <p class="txt headline margin-3">Get In Touch</p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <form name="contact" method="post" action="contact.php">
+                            <input type="text" name="name" id="name" placeholder="Name"/><br/>
+                            <input type="text" name="email" id="email" placeholder="Email"/><br/>
+                            <textarea name="text" id="text" placeholder="Text"></textarea><br/>
+                            <input type="submit" value="Send" class="button" />
+                        </form>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="txt contact">The DataTank <br/><br/>
+                        <span class="italic">iMinds<br/>
+                        Gaston Crommenlaan 8<br/>
+                        Gent</span></p>
+                    </div>
+                </div>
+            <div class="footeroverlay">
+               <div class="row">
+                    <div class="col-md-3"><p class="lft"><a href="#" target="_blank" class="footer">Twitter</a></p></div>
+                    <div class="col-md-3"><p class="cntr-2"><a href="#" target="_blank" class="footer">Github</a></p></div>
+                    <div class="col-md-3"><p class="cntr-2"><a href="#" target="_blank" class="footer">Documentation</a></p></div>
+                    <div class="col-md-3"><p class="rght"><a href="#" target="_blank" class="footer">Get Started</a></p></div>
+                </div>
+            </div>
             </div>
         </div>
     </div>

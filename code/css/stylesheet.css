@@ -52,6 +52,26 @@ a:hover{
     background-size: cover;
 }
 
+.container #whowhat{
+    width:auto;
+    height:590px;
+    background: url(../images/whowhat.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container #footer{
+    width:auto;
+    height:590px;
+    background: url(../images/footer.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .overlay{
     background: rgba(23,52,63,0.75);
     overflow: hidden;
@@ -64,6 +84,14 @@ a:hover{
     background: rgba(23,52,63,0.80);
     overflow: hidden;
     z-index: 3;     
+}
+
+.footeroverlay{
+    background: rgba(23,52,63,0.80);
+    overflow: hidden;
+    z-index: 3;
+    margin-top:61px;
+    height:80px;
 }
 
 .logo{
@@ -111,7 +139,7 @@ a.border{
     border: solid 1px;
 }
 
-p.txt{
+p.txt, form input{
     font-family: 'Varela Round', sans-serif;
     color:white;
     margin-left:95px;
@@ -126,17 +154,20 @@ p.txtinvert{
 p.headline{
     font-size:46px;
     margin-left:95px;
-    margin-top:150px;
     text-transform:uppercase;
     margin-bottom:0px;
 }
 
-p.headline-2{
-    font-size:46px;
-    margin-left:95px;
+p.margin-1{
+    margin-top:150px;
+}
+
+p.margin-2{
     margin-top:110px;
-    text-transform:uppercase;
-    margin-bottom:0px;
+}
+
+p.margin-3{
+    margin-top:60px;
 }
 
 p.whowhat{
@@ -220,7 +251,7 @@ p.mrgn-2{
     max-width:200px;
     margin-top:20px;
     line-height:32px;
-    margin-bottom:20px;
+    margin-bottom:30px;
 }
 
 img.quote{
@@ -262,6 +293,103 @@ p.left{
     margin-left:40px;
 }
 
+form input{
+    background:transparent;
+    padding:12px 12px 12px 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+    border-color:white;
+    border: solid 1px;
+    max-width:260px;
+    font-size:14px;
+    text-transform:uppercase;
+    width:100%;
+    margin-bottom:8px;
+}
+
+form input:active{
+    border-color:#36ab70;
+    transition: .2xs ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+}
+
+form textarea{
+    background:transparent;
+    padding:12px 12px 12px 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+    border-color:white;
+    max-width:260px;
+    font-size:14px;
+    text-transform:uppercase;
+    width:100%;
+    margin-bottom:8px;
+    height:100px;
+    margin-left:95px;
+}
+
+form #name{
+    margin-top:62px;
+}
+
+input.button{
+    font-family: 'Varela Round', sans-serif;
+    color:white;
+    font-size:16px;
+    text-transform:uppercase;
+    background:#36ab70;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;  
+    margin: 20px 40px 0px 95px;
+    padding: 16px 28px 16px 28px;
+    width:160px;
+    border:none;
+}
+
+input.button:hover{
+    background:#b1bfc4; 
+    color:white;
+    transition: .2xs ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+    cursor:pointer;   
+}
+
+p.contact{
+    font-size:18px;
+    margin-top: 62px;
+    padding-left:20px;
+}
+
+a.footer{
+    text-transform:uppercase;
+    font-size:15px;
+}
+
+p.cntr-2{
+    text-align:center;
+    font-family: 'Varela Round', sans-serif;
+    color:white;
+}
+
+p.lft{
+    margin-left:95px;
+    text-align:left;
+    font-family: 'Varela Round', sans-serif;
+    color:white;
+}
+
+p.rght{
+    margin-right:95px;
+    text-align:right;
+    font-family: 'Varela Round', sans-serif;
+    color:white;
+}
+
 @media (max-width: 991px) {
     p.logo{
         font-size:14px;   
@@ -277,11 +405,11 @@ p.left{
         font-family: 'Varela Round', sans-serif;
         color:white;
         margin-left:40px;
-        margin-top:60px;
+        margin-top:44px;
         text-transform:uppercase;
     }
 
-    p.txt{
+    p.txt, form input{
         margin-left:40px;
     }
 
@@ -374,5 +502,60 @@ p.left{
         margin-left:40px;
         margin-right:40px;
         max-width:100%
+    }
+
+    p.margin-3{
+        margin-top:26px;
+    }
+
+    form input{
+        padding:8px 8px 8px 8px;
+        font-size:14px;
+        margin-right:40px;
+    }
+    form #name{
+        margin-top:20px;
+    }
+    form textarea{
+        background:transparent;
+        padding:8px 8px 8px 8px;
+        max-width:260px;
+        width:100%;
+        margin-bottom:8px;
+        height:38px;
+        margin: 0 40px 0 40px;
+    }
+    input.button{
+        font-size:14px; 
+        margin: 10px 40px 0px 40px;
+        padding: 8px 14px 8px 14px;
+    }
+
+    p.contact{
+        font-size:16px;
+        margin-top: 20px;
+        padding-left:0px;
+    }
+
+    .footeroverlay{
+        background: rgba(23,52,63,0.80);
+        overflow: hidden;
+        z-index: 3;
+        margin-top:20px;
+        height:200px;
+    }
+    p.cntr-2{
+        text-align:left;
+        margin-left:40px;
+    }
+    
+    p.lft{
+        margin-left:40px;
+        text-align:left;
+    }
+    
+    p.rght{
+        margin-left:40px;
+        text-align:left;
     }
 }

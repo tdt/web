@@ -4,11 +4,10 @@
 <!--
 
 TO DO
-* Background transparent compatability;
-* Scroll to learn more button
 * Check form input:active? (does css exist in this case?)
 * Welke contactinformatie op de website?
 * PHP form 
+* IE compability
 
 -->
 
@@ -26,6 +25,7 @@ TO DO
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
     
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.pack.js"></script>
     
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 </head>
@@ -45,7 +45,7 @@ TO DO
                     <div class="col-xs">
                         <p class="txt headline margin-1">The Datatank</p>
                         <p class="txt tagline">We're taking it to the next level. New version. Professional support.</p>
-                        <a class="txt button" href="#">Learn more</a>
+                        <a class="txt button transition" href="#features">Learn more</a>
                         <p class="txt quote">
                             <span class="italic">“If you’re looking for an open source solution..<br/>
                             Congratulations, you’ve found it.”</span><br/>
@@ -57,42 +57,44 @@ TO DO
         </div>
         <div class="row bg">
             <div class="col-md-6 margintop">
-                <table>
-                    <tr>
-                        <td><p class="txtinvert italic">So far..</p></td>
-                    </tr>
-                    <tr>
-                        <td>Build &amp; Improve</td>
-                        <td><img src="images/checkmark.png" alt="checkmark" class="checkmark"/></td>
-                    </tr>
-                    <tr>
-                        <td>Installing</td>
-                        <td><img src="images/checkmark.png" alt="checkmark" class="checkmark"/></td>
-                    </tr> 
-                    <tr>
-                        <td>Open Source Data</td>
-                        <td><img src="images/checkmark.png" alt="checkmark" class="checkmark"/></td>
-                    </tr> 
-                </table>    
-            </div>
-            <div class="col-md-6 margintop">
-                <table class="tableinvert">
-                    <tr>
-                        <td><p class="txtinvert italic">New..</p></td>
-                    </tr>
-                    <tr>
-                        <td>Personal Support</td>
-                        <td><img src="images/plus.png" alt="new" class="checkmark"/></td>
-                    </tr>
-                    <tr>
-                        <td>Your Custom Data</td>
-                        <td><img src="images/plus.png" alt="new" class="checkmark"/></td>
-                    </tr> 
-                    <tr>
-                        <td>Reliable Hosting</td>
-                        <td><img src="images/plus.png" alt="new" class="checkmark"/></td>
-                    </tr> 
-                </table> 
+                <section id="features" class="transition">
+                    <table>
+                        <tr>
+                            <td><p class="txtinvert italic">So far..</p></td>
+                        </tr>
+                        <tr>
+                            <td>Build &amp; Improve</td>
+                            <td><img src="images/checkmark.png" alt="checkmark" class="checkmark"/></td>
+                        </tr>
+                        <tr>
+                            <td>Installing</td>
+                            <td><img src="images/checkmark.png" alt="checkmark" class="checkmark"/></td>
+                        </tr> 
+                        <tr>
+                            <td>Open Source Data</td>
+                            <td><img src="images/checkmark.png" alt="checkmark" class="checkmark"/></td>
+                        </tr> 
+                    </table>    
+                </div>
+                <div class="col-md-6 margintop">
+                    <table class="tableinvert">
+                        <tr>
+                            <td><p class="txtinvert italic">New..</p></td>
+                        </tr>
+                        <tr>
+                            <td>Personal Support</td>
+                            <td><img src="images/plus.png" alt="new" class="checkmark"/></td>
+                        </tr>
+                        <tr>
+                            <td>Your Custom Data</td>
+                            <td><img src="images/plus.png" alt="new" class="checkmark"/></td>
+                        </tr> 
+                        <tr>
+                            <td>Reliable Hosting</td>
+                            <td><img src="images/plus.png" alt="new" class="checkmark"/></td>
+                        </tr> 
+                    </table> 
+                </section>
             </div>
         </div>
         <div class="row bg">
@@ -163,14 +165,27 @@ TO DO
                 </div>
             <div class="footeroverlay">
                <div class="row">
-                    <div class="col-md-3"><p class="lft"><a href="#" target="_blank" class="footer">Twitter</a></p></div>
-                    <div class="col-md-3"><p class="cntr-2"><a href="#" target="_blank" class="footer">Github</a></p></div>
-                    <div class="col-md-3"><p class="cntr-2"><a href="#" target="_blank" class="footer">Documentation</a></p></div>
-                    <div class="col-md-3"><p class="rght"><a href="#" target="_blank" class="footer">Get Started</a></p></div>
+                    <div class="col-md-3"><p class="lft"><a href="https://twitter.com/TheDataTank" target="_blank" class="footer">Twitter</a></p></div>
+                    <div class="col-md-3"><p class="cntr-2"><a href="https://github.com/tdt/" target="_blank" class="footer">Github</a></p></div>
+                    <div class="col-md-3"><p class="cntr-2"><a href="http://docs.thedatatank.com" target="_blank" class="footer">Documentation</a></p></div>
+                    <div class="col-md-3"><p class="rght"><a href="http://docs.thedatatank.com/4.0/installation" target="_blank" class="footer">Get Started</a></p></div>
                 </div>
             </div>
             </div>
         </div>
     </div>
+    
+    <script type="text/javascript">
+       $('a[href^=#]').on("click",function(e){
+    var t= $(this.hash);
+    var t=t.length&&t||$('[name='+this.hash.slice(1)+']');
+    if(t.length){
+        var tOffset=t.offset().top;
+        $('html,body').animate({scrollTop:tOffset-20},'slow');
+        e.preventDefault();
+    }
+});
+    
+    </script>
 </body>
 </html>

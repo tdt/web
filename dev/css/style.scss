@@ -1,3 +1,10 @@
+@import 'bootstrap';
+
+*{
+    outline: none !important;
+    font-family: 'Varela Round', 'Helvetica', sans-serif !important;
+}
+
 html, .bg{
     background: #f8f8f3;
 }
@@ -5,6 +12,19 @@ html, .bg{
 a{
     text-decoration:none;
     color:white;
+
+    &:hover, &:focus{
+        color:#36ab70;
+        text-decoration:none;
+        transition: .2xs ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+    }
+}
+
+h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 a.border:hover{
@@ -14,88 +34,57 @@ a.border:hover{
     -webkit-transition: .2s ease-in-out;
 }
 
-div.row{
-    overflow-x:hidden; 
-}
-
-a:hover{
-    color:#36ab70;
-    text-decoration:none;
-    transition: .2xs ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-}
-
-.container{
-    padding:0;
-    margin:0;
-    width:100%;
-}
-
-.container #header{
-    width:auto;
+#header{
     height:600px;
-    background: url(../images/header.jpg) no-repeat center center fixed; 
+    background: url(../images/header.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.container #whowhat{
-    width:auto;
+#whowhat{
     height:590px;
-    background: url(../images/whowhat.jpg) no-repeat center center fixed; 
+    background: url(../images/whowhat.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
-.container #whowhat{
-    width:auto;
-    height:590px;
-    background: url(../images/whowhat.jpg) no-repeat center center fixed; 
+#footer{
+    background: url(../images/footer.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-}
-
-.container #footer{
-    width:auto;
-    height:590px;
-    background: url(../images/footer.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    // padding-bottom: 80px;
 }
 
 .overlay{
     background: rgba(23,52,63,0.75);
     overflow: hidden;
     height: 100%;
-    z-index: 2;   
+    z-index: 2;
 }
 
 
 .navoverlay{
     background: rgba(23,52,63,0.80);
     overflow: hidden;
-    z-index: 3;     
+    z-index: 3;
 }
 
 .footeroverlay{
-    background: rgba(23,52,63,0.80);
+    background: rgba(23,52,63,0.90);
     overflow: hidden;
     z-index: 3;
-    margin-top:61px;
     height:80px;
+    line-height: 80px;
 }
 
 .logo{
-    float:left;   
+    float:left;
 }
 
 div.height{
@@ -105,103 +94,96 @@ div.height{
 img.logo{
     padding-top:29px;
     padding-bottom:29px;
-    padding-left:90px;
 }
 
 p.logo{
     font-size:16px;
     text-transform:uppercase;
     color:white;
-    padding-top:34px;
+    padding-top:49px;
     padding-left:24px;
-    font-family: 'Varela Round', sans-serif;
 }
 
 p.nav{
     font-size:16px;
     text-transform:uppercase;
     color:white;
-    width:186px;
-    font-family: 'Varela Round', sans-serif;
     margin-top:49px;
 }
 
 .special{
-    margin-left:40%   
+    margin-left:40%
 }
 
 a.border{
     padding:17px 17px 17px 17px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;  
+    border-radius: 5px;
     border-color:white;
     border: solid 1px;
 }
 
 p.txt, form input{
-    font-family: 'Varela Round', sans-serif;
     color:white;
-    margin-left:95px;
 }
 
 p.txtinvert{
-    font-family: 'Varela Round', sans-serif;
     color:#282828;
     font-size:18px;
 }
 
 p.headline{
     font-size:46px;
-    margin-left:95px;
     text-transform:uppercase;
     margin-bottom:0px;
 }
 
 p.margin-1{
-    margin-top:150px;
+    margin-top: 110px;
 }
 
 p.margin-2{
-    margin-top:110px;
+    margin-top: 120px;
 }
 
 p.margin-3{
-    margin-top:60px;
+    margin-top: 60px;
 }
 
 p.whowhat{
-    font-size:18px;
-    max-width:580px;
+    font-size: 18px;
 }
-
 
 p.tagline{
     font-size:22px;
     font-weight:300;
-    margin: 0 0 40px 95px;
+    margin-bottom: 40px;
 }
 
-a.button{
+.button{
     font-size:16px;
+    border: 0px;
     text-transform:uppercase;
     background:#36ab70;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;  
-    margin: 0px 40px 0px 95px;
+    border-radius: 5px;
+    margin-bottom: 40px;
     padding: 16px 28px 16px 28px;
     width:163px;
+
+
+    &:hover, &:focus{
+        background:#b1bfc4;
+        color: #fff;
+        transition: .2xs ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        cursor:pointer;
+    }
 }
 
-a.button:hover{
-    background:#b1bfc4; 
-    color:white;
-    transition: .2xs ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-    cursor:pointer;
-}
 
 p.quote{
     font-size:14px;
@@ -213,34 +195,29 @@ p.quote{
 }
 
 table{
-    width:60%;
-    max-width:500px;
-    margin:auto;
-    font-family: 'Varela Round', sans-serif;
     font-size:18px;
     float:right;
 }
 
 table.tableinvert{
-    float:left;   
+    float:left;
 }
 
 
 div.margintop{
-    margin-top:10px;   
+    margin-top: 25px;
 }
 
 p.tabletitle{
-    text-align:left;   
+    text-align:left;
 }
 
 img.checkmark{
-    padding: 4px 10px 4px 10px;   
+    padding: 4px 10px 4px 10px;
 }
 
 p.mrgn{
     margin-left:95px;
-    max-width:620px;
     margin:auto;
     margin-top:20px;
     line-height:32px;
@@ -248,14 +225,12 @@ p.mrgn{
 }
 
 p.mrgn-2{
-    max-width:200px;
     margin-top:20px;
     line-height:32px;
     margin-bottom:30px;
 }
 
 img.quote{
-    margin-left:-70px;
     margin-right:33px;
 }
 
@@ -273,12 +248,12 @@ img.center{
 }
 
 img.right{
-    float:right;  
+    float:right;
     margin-right:40px;
 }
 
 img.left{
-    margin-left:40px;   
+    margin-left:40px;
 }
 
 p.right{
@@ -298,17 +273,16 @@ form input{
     padding:12px 12px 12px 12px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;  
+    border-radius: 5px;
     border-color:white;
     border: solid 1px;
-    max-width:260px;
     font-size:14px;
     text-transform:uppercase;
     width:100%;
     margin-bottom:8px;
 }
 
-form input:active{
+form input:focus, form textarea:focus{
     border-color:#36ab70;
     transition: .2xs ease-in-out;
     -moz-transition: .2s ease-in-out;
@@ -320,44 +294,19 @@ form textarea{
     padding:12px 12px 12px 12px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;  
+    border-radius: 5px;
     border-color:white;
-    max-width:260px;
     font-size:14px;
     text-transform:uppercase;
     width:100%;
     margin-bottom:8px;
     height:100px;
-    margin-left:95px;
     color:white;
+    resize: vertical;
 }
 
 form #name{
     margin-top:62px;
-}
-
-input.button{
-    font-family: 'Varela Round', sans-serif;
-    color:white;
-    font-size:16px;
-    text-transform:uppercase;
-    background:#36ab70;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;  
-    margin: 20px 40px 0px 95px;
-    padding: 16px 28px 16px 28px;
-    width:160px;
-    border:none;
-}
-
-input.button:hover{
-    background:#b1bfc4; 
-    color:white;
-    transition: .2xs ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-    cursor:pointer;   
 }
 
 p.contact{
@@ -393,65 +342,66 @@ p.rght{
 
 @media (max-width: 991px) {
     p.logo{
-        font-size:14px;   
+        font-size:14px;
     }
+
     img.logo{
         padding-top:20px;
         padding-bottom:0px;
-        padding-left:40px;
+        padding-left:20px;
     }
 
     p.headline{
         font-size:30px;
         font-family: 'Varela Round', sans-serif;
         color:white;
-        margin-left:40px;
+        margin-left:20px;
         margin-top:44px;
         text-transform:uppercase;
     }
 
     p.txt, form input{
-        margin-left:40px;
+        margin-left:20px;
     }
 
     p.tagline{
         font-size:16px;
-        margin-right:40px;
+        margin-right: 20px;
     }
 
     p.nav{
-        padding-left:40px;
+        padding-left:20px;
         padding-top:0px;
         padding-bottom:10px;
         margin-top:20px;
-        font-size:14px; 
+        font-size:14px;
     }
     .special{
-        margin-left:0%   
+        margin-left:0%
     }
     a.border{
         border:none;
         padding:0 0 0 0;
-        
+
     }
     div.height{
         height:100px;
     }
 
     a.button{
-        margin-left:40px;
+        margin-left:20px;
     }
 
     table{
         float:left;
-        margin-left:40px;
+        margin-left:20px;
         width:70%
     }
 
     p.mrgn{
         float:left;
-        margin-left:40px;
-        margin-right:40px;
+        margin-left:20px;
+        margin-right: 20px;
     }
 
     img.quote{
@@ -461,13 +411,13 @@ p.rght{
 
     p.headline-2{
         font-size:30px;
-        margin-left:40px;
+        margin-left:20px;
         margin-top:45px;
     }
 
     p.whowhat{
         font-size:16px;
-        margin-right:40px;
+        margin-right: 20px;
     }
 
     img.right, img.center, img.left{
@@ -488,20 +438,20 @@ p.rght{
 
     p.right{
         float:none;
-        margin-left:40px;
-        margin-right:40px;
+        margin-left:20px;
+        margin-right: 20px;
         max-width:100%
     }
-    
+
     p.cntr{
-        margin-left:40px;
-        margin-right:40px;
+        margin-left:20px;
+        margin-right: 20px;
         max-width:100%
     }
-    
+
     p.left{
-        margin-left:40px;
-        margin-right:40px;
+        margin-left:20px;
+        margin-right: 20px;
         max-width:100%
     }
 
@@ -512,23 +462,26 @@ p.rght{
     form input{
         padding:8px 8px 8px 8px;
         font-size:14px;
-        margin-right:40px;
+        margin-right: 20px;
+        width: auto;
     }
+
     form #name{
         margin-top:20px;
     }
+
     form textarea{
         background:transparent;
         padding:8px 8px 8px 8px;
-        max-width:260px;
-        width:100%;
+        width: auto;
         margin-bottom:8px;
-        height:38px;
-        margin: 0 40px 0 40px;
+        height: 38px;
+        margin: 0 20px 0 20px;
     }
+
     input.button{
-        font-size:14px; 
-        margin: 10px 40px 0px 40px;
+        font-size:14px;
+        margin: 10px 20px 0px 20px;
         padding: 8px 14px 8px 14px;
     }
 
@@ -539,24 +492,22 @@ p.rght{
     }
 
     .footeroverlay{
-        background: rgba(23,52,63,0.80);
-        overflow: hidden;
-        z-index: 3;
-        margin-top:20px;
-        height:200px;
+        height: 160px;
+        padding-top: 20px;
+        line-height:  20px;
     }
     p.cntr-2{
         text-align:left;
-        margin-left:40px;
+        margin-left:20px;
     }
-    
+
     p.lft{
-        margin-left:40px;
+        margin-left:20px;
         text-align:left;
     }
-    
+
     p.rght{
-        margin-left:40px;
+        margin-left:20px;
         text-align:left;
     }
 }

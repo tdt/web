@@ -1,8 +1,9 @@
 @import 'bootstrap';
+@import 'font-awesome';
 
 *{
     outline: none !important;
-    font-family: 'Varela Round', 'Helvetica', sans-serif !important;
+    font-family: 'Varela Round', 'Helvetica', sans-serif;
 }
 
 html, .bg{
@@ -20,6 +21,17 @@ a{
         -moz-transition: .2s ease-in-out;
         -webkit-transition: .2s ease-in-out;
     }
+}
+
+.green{
+    color: #36ab70;
+}
+
+h2{
+    font-size:46px;
+    text-transform:uppercase;
+    margin-bottom: 20px;
+    color: #fff;
 }
 
 h3{
@@ -50,6 +62,18 @@ a.border:hover{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    h2{
+        margin-top: 130px;
+    }
+
+    p{
+        margin: 40px 0px;
+    }
+
+    .button{
+        margin-top: 40px;
+    }
 }
 
 #footer{
@@ -59,6 +83,16 @@ a.border:hover{
     -o-background-size: cover;
     background-size: cover;
     // padding-bottom: 80px;
+}
+
+#features{
+    i{
+        padding: 0px 25px;
+    }
+}
+
+.fa-quote-left{
+    padding-right: 10px;
 }
 
 .overlay{
@@ -129,7 +163,7 @@ p.txt, form input{
 }
 
 p.txtinvert{
-    color:#282828;
+    color:#183440;
     font-size:18px;
 }
 
@@ -210,10 +244,6 @@ div.margintop{
 
 p.tabletitle{
     text-align:left;
-}
-
-img.checkmark{
-    padding: 4px 10px 4px 10px;
 }
 
 p.mrgn{
@@ -388,14 +418,14 @@ p.rght{
         height:100px;
     }
 
-    a.button{
-        margin-left:20px;
-    }
-
     table{
         float:left;
         margin-left:20px;
         width:70%
+    }
+
+    a.button{
+        margin-left: 20px;
     }
 
     p.mrgn{
@@ -417,7 +447,24 @@ p.rght{
 
     p.whowhat{
         font-size:16px;
+        margin-left:20px;
         margin-right: 20px;
+    }
+
+    #whowhat{
+        h2{
+            margin-top: 30px;
+            padding-left: 20px;
+        }
+
+        p{
+            padding: 0px 20px;
+            margin: 30px 0px;
+        }
+
+        .button{
+            margin-left: 0px;
+        }
     }
 
     img.right, img.center, img.left{
@@ -430,7 +477,6 @@ p.rght{
     }
 
     p.mrgn-2{
-        max-width:200px;
         margin-top:20px;
         line-height:32px;
         margin-bottom:20px;

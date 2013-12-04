@@ -35,8 +35,11 @@ h2{
 }
 
 h3{
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
 }
 
 a.border:hover{
@@ -89,6 +92,40 @@ a.border:hover{
     i{
         padding: 0px 25px;
     }
+}
+
+#quotes{
+
+    .logo{
+        height: 100px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+
+        &.gent{
+            background: url('../images/logo-gent.png') no-repeat;
+            background-size: 200px;
+            background-position: center;
+        }
+
+        &.leiedal{
+            background: url('../images/logo-leiedal.png') no-repeat;
+            background-size: 200px;
+            background-position: center;
+        }
+
+        &.zeropoint{
+            background: url('../images/logo-zeropoint.png') no-repeat;
+            background-size: 200px;
+            background-position: center;
+        }
+    }
+
+    & > div{
+        padding-left: 40px;
+        text-align: center;
+    }
+
 }
 
 .fa-quote-left{
@@ -378,6 +415,7 @@ p.rght{
 .hide{
     display: none;
 }
+
 
 @media (max-width: 991px) {
     p.logo{

@@ -140,7 +140,7 @@
         </div>
     </div>
 
-    <div class="bg">
+    <div class="bg ">
         <div class="container">
             <div class="row">
                 <div class='col-sm-12'>
@@ -149,9 +149,9 @@
                     </h3>
                 </div>
             </div>
-            <div class='row'>
+            <div id="quotes" class='row'>
                 <div class="col-md-4">
-                    <i class='fa fa-4x fa-github center'></i>
+                    <div class='logo gent'></div>
 
                     <p class="txtinvert mrgn-2">
                         <i class='fa fa-2x fa-quote-left'></i>
@@ -160,7 +160,7 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <i class='fa fa-4x fa-github center'></i>
+                    <div class='logo leiedal'></div>
 
                     <p class="txtinvert mrgn-2">
                         <i class='fa fa-2x fa-quote-left'></i>
@@ -169,7 +169,7 @@
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <i class='fa fa-4x fa-github center'></i>
+                    <div class='logo zeropoint'></div>
 
                     <p class="txtinvert mrgn-2">
                         <i class='fa fa-2x fa-quote-left'></i>
@@ -274,6 +274,7 @@
 
         $('#contact .button').on('click', function(e){
             e.preventDefault();
+            $('.message').addClass('hide');
 
             var form = $('#contact');
             var name = $('#name', form);

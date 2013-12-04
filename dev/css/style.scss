@@ -370,6 +370,15 @@ p.rght{
     color:white;
 }
 
+.message{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.hide{
+    display: none;
+}
+
 @media (max-width: 991px) {
     p.logo{
         font-size:14px;

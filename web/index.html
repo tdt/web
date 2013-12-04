@@ -191,11 +191,12 @@
                         <p class="txt headline margin-3">Get In Touch</p>
                         <div class="row">
                             <div class="col-md-4">
-                                <form name="contact" method="post" action="email.php">
+                                <form id='contact' name="contact" method="post" action="">
                                     <input type="text" name="name" id="name" placeholder="Name"/><br/>
-                                    <input type="text" name="email" id="email" placeholder="Email"/><br/>
+                                    <input type="email" name="email" id="email" placeholder="Email"/><br/>
                                     <textarea name="text" id="text" placeholder="Text"></textarea><br/>
                                     <input type="submit" value="Send" class="button" />
+                                    <span class='message hide'>Mail sent successfully!</span>
                                 </form>
                             </div>
                             <div class="col-md-8">
@@ -247,6 +248,41 @@
                 $('html,body').animate({scrollTop:tOffset-20},'slow');
                 e.preventDefault();
             }
+        });
+
+        $('#contact .button').on('click', function(e){
+            e.preventDefault();
+
+            var form = $('#contact');
+            var name = $('#name', form);
+            var email = $('#email', form);
+            var text = $('#text', form);
+
+            if(name.val().length < 1){
+                name.focus();
+            }else if(email.val().length < 5){
+                email.focus();
+            }else{
+                $.ajax({
+                    url: 'email.php',
+                    method: 'post',
+                    data: {
+                        name: name.val(),
+                        email: email.val(),
+                        text: text.val()
+                    },
+                    success: function(e){
+                        name.val('');
+                        text.val('');
+                        email.val('');
+                        $('.message').removeClass('hide').show();
+                    },
+                    error: function(e){
+                        console.log(e);
+                    }
+                });
+            }
+
         });
     </script>
 </body>

@@ -21,6 +21,10 @@ a{
         -moz-transition: .2s ease-in-out;
         -webkit-transition: .2s ease-in-out;
     }
+
+    i{
+        margin-right: 5px;
+    }
 }
 
 .green{
@@ -42,6 +46,10 @@ h3{
     text-transform: uppercase;
 }
 
+strong{
+    font-weight: 600;
+}
+
 a.border:hover{
     border-color:#36ab70;
     transition: .2xs ease-in-out;
@@ -56,6 +64,14 @@ a.border:hover{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    h1{
+        font-size:46px;
+        text-transform:uppercase;
+        margin-bottom: 0px;
+        color: #fff;
+        margin-top: 110px;
+    }
 }
 
 #whowhat{
@@ -89,8 +105,56 @@ a.border:hover{
 }
 
 #features{
+    padding: 50px 0px;
+
     i{
         padding: 0px 25px;
+    }
+
+    .txtinvert{
+        margin-bottom: 20px;
+    }
+
+    table{
+        tr{
+            td{
+                padding: 5px 0px;
+            }
+        }
+    }
+
+    .tableinvert{
+        background: #1f3c47;
+        color: #fff !important;
+
+
+        tr{
+            td{
+                padding: 10px 20px;
+            }
+
+            &:first-child td{
+                padding-bottom: 0px;
+            }
+
+            &:nth-child(2) td{
+                padding-top: 0px;
+            }
+
+            &:last-child td{
+                padding-bottom: 20px;
+            }
+        }
+
+        i{
+            float: left;
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+
+        i, p{
+            color: #fff !important;
+        }
     }
 }
 
@@ -133,6 +197,39 @@ a.border:hover{
         }
     }
 
+}
+
+#projects{
+    .logo{
+        height: 75px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+
+        &.a4e{
+            background: url('../images/logo-appsforeurope.png') no-repeat;
+            background-size: 150px;
+            background-position: center;
+        }
+
+        &.ewi{
+            background: url('../images/logo-ewi.png') no-repeat;
+            background-size: 150px;
+            background-position: center;
+        }
+
+        &.antwerpen{
+            background: url('../images/logo-antwerpen.png') no-repeat;
+            background-size: 150px;
+            background-position: center;
+        }
+
+        &.westtoer{
+            background: url('../images/logo-westtoer.png') no-repeat;
+            background-size: 150px;
+            background-position: center;
+        }
+    }
 }
 
 .fa-quote-left{
@@ -274,11 +371,11 @@ p.quote{
 
 table{
     font-size:18px;
-    float:right;
+    // float:right;
 }
 
 table.tableinvert{
-    float:left;
+    // float:left;
 }
 
 
@@ -609,5 +706,12 @@ p.rght{
     p.rght{
         margin-left:20px;
         text-align:left;
+    }
+
+
+    #projects{
+        .logo{
+            margin-bottom: 5px;
+        }
     }
 }

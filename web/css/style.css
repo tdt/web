@@ -2687,7 +2687,7 @@ a.border:hover {
   -webkit-transition: .2s ease-in-out; }
 
 #header {
-  height: 600px;
+  height: 550px;
   background: url(../images/header.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -2708,42 +2708,53 @@ a.border:hover {
     background-color: rgba(31, 60, 71, 0.8); }
   @media (max-width: 991px) {
     #header {
-      height: 680px; } }
+      height: 630px; } }
+  #header #intro {
+    text-align: center; }
+  @media (max-width: 600px) {
+    #header .tdt-button {
+      margin: .5em auto;
+      display: block;
+      width: 250px; } }
 
 .seperator {
-  height: 40px;
+  height: 30px;
   overflow: hidden;
   position: relative;
-  top: -40px; }
+  top: -30px;
+  cursor: hand;
+  cursor: pointer; }
   .seperator:before, .seperator:after {
-    border-bottom: 40px solid #f8f8f3;
+    border-bottom: 30px solid #f8f8f3;
     bottom: 0;
     content: " ";
     position: absolute;
     width: 50%; }
   .seperator:before {
-    border-right: 40px solid transparent;
+    border-right: 30px solid transparent;
     left: 0; }
   .seperator:after {
-    border-left: 40px solid transparent;
+    border-left: 30px solid transparent;
     right: 0; }
 
 .seperator-inv {
-  height: 40px;
+  height: 30px;
   overflow: hidden;
   position: relative;
-  top: 40px; }
+  top: 30px;
+  cursor: hand;
+  cursor: pointer; }
   .seperator-inv:before, .seperator-inv:after {
-    border-bottom: 40px solid transparent;
+    border-bottom: 30px solid transparent;
     bottom: 0;
     content: " ";
     position: absolute;
     width: 50%; }
   .seperator-inv:before {
-    border-right: 40px solid #f8f8f3;
+    border-right: 30px solid #f8f8f3;
     left: 0; }
   .seperator-inv:after {
-    border-left: 40px solid #f8f8f3;
+    border-left: 30px solid #f8f8f3;
     right: 0; }
 
 #whowhat {
@@ -2757,7 +2768,7 @@ a.border:hover {
     margin-top: 130px; }
   #whowhat p {
     margin: 40px 0px; }
-  #whowhat .button {
+  #whowhat .tdt-button {
     margin-top: 40px; }
 
 #footer {
@@ -2766,6 +2777,11 @@ a.border:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  #footer .tdt-button {
+    margin-left: 0; }
+    @media (max-width: 991px) {
+      #footer .tdt-button {
+        margin-left: 20px; } }
 
 #features {
   padding: 50px 0px; }
@@ -2792,6 +2808,11 @@ a.border:hover {
       padding-left: 0px; }
     #features .tableinvert i, #features .tableinvert p {
       color: #ffffff !important; }
+
+#get-started-container {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e5d3;
+  padding: 50px 0px; }
 
 #quotes .logo {
   height: 100px;
@@ -2852,6 +2873,32 @@ a.border:hover {
   background: rgba(23, 52, 63, 0.8);
   overflow: hidden;
   z-index: 3; }
+  .navoverlay .height {
+    height: 50px; }
+  .navoverlay .nav {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
+    margin-left: 1em;
+    margin-bottom: 0;
+    float: right; }
+    .navoverlay .nav .border {
+      padding: 17px 17px 17px 17px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 10px;
+      border-color: #ffffff;
+      border: solid 1px; }
+  .navoverlay img.logo {
+    height: 30px;
+    margin-top: 10px; }
+  .navoverlay p.logo {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 1em;
+    padding-left: 24px; }
 
 .footeroverlay {
   background: rgba(23, 52, 63, 0.9);
@@ -2862,37 +2909,6 @@ a.border:hover {
 
 .logo {
   float: left; }
-
-div.height {
-  height: 120px; }
-
-img.logo {
-  padding-top: 29px;
-  padding-bottom: 29px; }
-
-p.logo {
-  font-size: 16px;
-  text-transform: uppercase;
-  color: white;
-  padding-top: 49px;
-  padding-left: 24px; }
-
-p.nav {
-  font-size: 16px;
-  text-transform: uppercase;
-  color: white;
-  margin-top: 49px; }
-
-.special {
-  margin-left: 40%; }
-
-a.border {
-  padding: 17px 17px 17px 17px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border-color: #ffffff;
-  border: solid 1px; }
 
 p.txt, form input {
   color: #ffffff; }
@@ -2923,24 +2939,27 @@ p.tagline {
   font-weight: 300;
   margin-bottom: 40px; }
 
-.button {
+.tdt-button {
   font-size: 16px;
   border: 0px;
   text-transform: uppercase;
-  background: #36ab70;
+  border: 1px solid #ffffff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-bottom: 40px;
-  padding: 16px 28px 16px 28px;
-  width: 163px; }
-  .button:hover, .button:focus {
-    background: #b1bfc4;
+  padding: 16px 28px;
+  width: 163px;
+  text-align: center; }
+  .tdt-button:hover, .tdt-button:focus {
+    background-color: rgba(31, 60, 71, 0.8);
     color: #ffffff;
     transition: .2s ease-in-out;
     -moz-transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
     cursor: pointer; }
+  .tdt-button:not(:first-of-type) {
+    margin-left: 20px; }
 
 p.quote {
   font-size: 14px;
@@ -3009,12 +3028,11 @@ form input {
   border-color: white;
   border: solid 1px;
   font-size: 14px;
-  text-transform: uppercase;
   width: 100%;
   margin-bottom: 8px; }
 
 form input:focus, form textarea:focus {
-  border-color: #36ab70;
+  background-color: rgba(31, 60, 71, 0.8);
   transition: .2s ease-in-out;
   -moz-transition: .2s ease-in-out;
   -webkit-transition: .2s ease-in-out; }
@@ -3027,7 +3045,6 @@ form textarea {
   border-radius: 5px;
   border-color: #ffffff;
   font-size: 14px;
-  text-transform: uppercase;
   width: 100%;
   margin-bottom: 8px;
   height: 100px;
@@ -3071,14 +3088,6 @@ p.rght {
   display: none; }
 
 @media (max-width: 991px) {
-  p.logo {
-    font-size: 14px; }
-
-  img.logo {
-    padding-top: 20px;
-    padding-bottom: 0px;
-    padding-left: 20px; }
-
   p.headline {
     font-size: 30px;
     font-family: 'Varela Round', sans-serif;
@@ -3094,13 +3103,6 @@ p.rght {
     font-size: 16px;
     margin-right: 20px; }
 
-  p.nav {
-    padding-left: 20px;
-    padding-top: 0px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    font-size: 14px; }
-
   .special {
     margin-left: 0%; }
 
@@ -3115,9 +3117,6 @@ p.rght {
     float: left;
     margin-left: 20px;
     width: 70%; }
-
-  a.button {
-    margin-left: 20px; }
 
   p.mrgn {
     float: left;
@@ -3144,7 +3143,7 @@ p.rght {
   #whowhat p {
     padding: 0px 20px;
     margin: 30px 0px; }
-  #whowhat .button {
+  #whowhat .tdt-button {
     margin-left: 0px; }
 
   img.right, img.center, img.left {
@@ -3196,7 +3195,7 @@ p.rght {
     height: 38px;
     margin: 0 20px 0 20px; }
 
-  input.button {
+  input.tdt-button {
     font-size: 14px;
     margin: 10px 20px 0px 20px;
     padding: 8px 14px 8px 14px; }

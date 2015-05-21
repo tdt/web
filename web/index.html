@@ -35,26 +35,27 @@
             <div class="navoverlay">
                 <div class='container'>
                     <div class='row'>
-                        <div class="col-md-8 height">
+                        <div class="col-xs-5 height">
                             <img src="images/logo.png" alt="logo the datank" class="logo"/>
                             <p class="logo">The DataTank</p>
                         </div>
-                        <div class="col-md-2">
-                            <p class="nav special"><a href="https://github.com/tdt/" target="_blank"><i class='fa fa-github'></i> Github</a></p>
-                        </div>
-                        <div class="col-md-2">
-                            <p class="nav"><a href="http://docs.thedatatank.com" class="border" target="_blank">Documentation</a></p>
+                        <div class="col-xs-7">
+                            <p class="nav"><a href="http://docs.thedatatank.com" target="_blank" title="Documentation"><i class="fa fa-book fa-2x"></i></a></p>
+                            <p class="nav"><a href="https://github.com/tdt/" target="_blank" title="GitHub"><i class="fa fa-github fa-2x"></i></a></p>
+                            <p class="nav"><a href="https://twitter.com/thedatatank" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></p>
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="container">
-                <div class="row" style="text-align: center">
+                <div class="row" id="intro">
                     <h1>The Datatank</h1>
                     <p class="txt tagline">Transform your datasets into a RESTful API.</p>
-                    <a class="txt button transition" href="https://github.com/tdt/"><i class="fa fa-github-square"></i> Github</a>
+                    <a class="txt tdt-button transition" href="https://github.com/tdt/"><i class="fa fa-github"></i> Github</a>
                  <!--   <a class="txt button transition" href="#features"><i class="fa fa-info-circle"></i> Learn more</a> -->
-                    <a class="txt button transition" href="http://docs.thedatatank.com"><i class="fa fa-book"></i> Documentation</a>
+                    <a class="txt tdt-button" href="http://demo.thedatatank.com/" target="_blank"><i class="fa fa-eye"></i> Demo</a>
+                    <a class="txt tdt-button transition" href="http://docs.thedatatank.com"><i class="fa fa-book"></i> Documentation</a>
                     <p class="txt quote">
                         <span class="italic">The DataTank is open source software, just like CKAN, Drupal or Elastic Search, which you can use to transform any dataset into an HTTP API.</span>
                     </p>
@@ -71,7 +72,7 @@
                     <div class="col-md-4 col-md-offset-2">
                         <table>
                             <tr>
-                                <td><p class="txtinvert italic">What we already did..</p></td>
+                                <td><p class="txtinvert italic">Features go here</p></td>
                             </tr>
                             <tr>
                                 <td>Open source project</td>
@@ -90,16 +91,59 @@
                     <div class="col-md-4">
                         <table class="tableinvert">
                             <tr>
-                                <td><p class="txtinvert italic">What's new?</p></td>
+                                <td><p class="txtinvert italic">Mini Roadmap</p></td>
                             </tr>
                             <tr>
-                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>Long term support releases with SLA's</strong></td>
+                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>Bi-annual release schedule</strong></td>
                             </tr>
                             <tr>
-                                <td><i class='fa fa-2x fa-plus-circle green'></i><strong>Hosted instances</strong></td>
+                                <td><i class='fa fa-2x fa-plus-circle green'></i><strong>5.0 released 6th of July</strong></td>
                             </tr>
                             <tr>
                                 <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>Custom requests</strong></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="bg" id="get-started-container">
+        <div class="container">
+            <div id="get-started" class="row">
+                <section class="transition">
+                    <div class="col-md-4 col-md-offset-2">
+                        <table>
+                            <tr>
+                                <td><p class="txtinvert italic">More technical stuff here?</p></td>
+                            </tr>
+                            <tr>
+                                <td>Machine &amp; human readable outputs</td>
+                                <td><i class='fa fa-2x fa-check-circle green'></i></td>
+                            </tr>
+                            <tr>
+                                <td>Automatic DCAT feed</td>
+                                <td><i class='fa fa-2x fa-check-circle green'></i></td>
+                            </tr>
+                            <tr>
+                                <td>Try the demo!</td>
+                                <td><i class='fa fa-2x fa-check-circle green'></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-4">
+                        <table class="tableinvert">
+                            <tr>
+                                <td><p class="txtinvert italic">Support for these filetypes</p></td>
+                            </tr>
+                            <tr>
+                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>CSV</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>XML</strong></td>
+                            </tr>
+                            <tr>
+                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>GeoJSON</strong></td>
                             </tr>
                         </table>
                     </div>
@@ -112,17 +156,16 @@
         <div class="overlay">
             <div class="container">
                 <div class="row">
-                    <h2>Who &amp; What</h2>
+                    <h2>Built by the community</h2>
                     <p class="txt whowhat">
-                        The DataTank is a RESTful data management system written in PHP5. It's ready to be your customised datahub inside your organisation that enables publishing several data formats into web readable formats. The software is managed by OKFN Belgium.
+                        The DataTank is a RESTful data management system written in PHP5. It's ready to be your customised datahub inside your organisation that enables publishing several data formats into web readable formats. The software is managed by Open Knowledge Belgium.
                     </p>
 
                     <p class="txt whowhat">
                         A professional service is guaranteed by our core team of developers. To help us lifting The DataTank to the next level, join our user group of enthusiasts who meet regularly to decide the next priorities of The DataTank development.
                     </p>
-
-                    <p>
-                        <a class="txt button" href="http://demo.thedatatank.com/" target="_blank">Demo</a>
+                    <p class="txt whowhat">
+                        Here we should reference stuff like Gitter, Twitter, Github again.
                     </p>
                 </div>
             </div>
@@ -214,10 +257,10 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <form id='contact' name="contact" method="post" action="">
-                                    <input type="text" name="name" id="name" placeholder="Name"/><br/>
-                                    <input type="email" name="email" id="email" placeholder="Email"/><br/>
-                                    <textarea name="text" id="text" placeholder="Text"></textarea><br/>
-                                    <input type="submit" value="Send" class="button" />
+                                    <input type="text" name="name" id="name" placeholder="NAME"/><br/>
+                                    <input type="email" name="email" id="email" placeholder="EMAIL"/><br/>
+                                    <textarea name="text" id="text" placeholder="MESSAGE"></textarea><br/>
+                                    <input type="submit" value="Send" class="tdt-button" />
                                     <span class='message hide'>Mail sent successfully!</span>
                                 </form>
                             </div>
@@ -254,7 +297,7 @@
                     </div>
                     <div class="col-md-3">
                         <p class="rght">
-                            <a href="http://docs.thedatatank.com/4.0/installation" target="_blank" class="footer">Get Started</a>
+                            <a href="http://docs.thedatatank.com/4.6/installation" target="_blank" class="footer">Get Started</a>
                         </p>
                     </div>
                 </div>

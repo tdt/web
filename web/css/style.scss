@@ -6,49 +6,51 @@ $color-dark-white: #f8f8f3;
 $color-green: #36ab70;
 $color-blue: #1f3c47;
 $color-light-blue: #b1bfc4;
+$fade-blue-80: rgba(31,60,71, 0.8);
+$fade-blue-60: rgba(31,60,71, 0.6);
 // Triangle call to action to scroll down generator
 @mixin triforce($size, $color){
-  height:$size;
-  overflow:hidden;
-  position:relative;
-  top: -$size;
-  &:before, &:after{
-    border-bottom: $size solid $color;
-    bottom:0;
-    content:" ";
-    position:absolute;
-    width:50%;
-  }
-  &:before{
-    border-right: $size solid transparent;
-    left:0;
-  }
-  &:after{
-    border-left: $size solid transparent;
-    right:0;
-  }
+    height:$size;
+    overflow:hidden;
+    position:relative;
+    top: -$size;
+    &:before, &:after{
+        border-bottom: $size solid $color;
+        bottom:0;
+        content:" ";
+        position:absolute;
+        width:50%;
+    }
+    &:before{
+        border-right: $size solid transparent;
+        left:0;
+    }
+    &:after{
+        border-left: $size solid transparent;
+        right:0;
+    }
 }
 
 @mixin triforce-inv($size, $color){
-  height:$size;
-  overflow:hidden;
-  position:relative;
-  top: $size;
-  &:before, &:after{
-    border-bottom: $size solid transparent;
-    bottom:0;
-    content:" ";
-    position:absolute;
-    width:50%;
-  }
-  &:before{
-    border-right: $size solid $color;
-    left:0;
-  }
-  &:after{
-    border-left: $size solid $color;
-    right:0;
-  }
+    height:$size;
+    overflow:hidden;
+    position:relative;
+    top: $size;
+    &:before, &:after{
+        border-bottom: $size solid transparent;
+        bottom:0;
+        content:" ";
+        position:absolute;
+        width:50%;
+    }
+    &:before{
+        border-right: $size solid $color;
+        left:0;
+    }
+    &:after{
+        border-left: $size solid $color;
+        right:0;
+    }
 }
 
 *{
@@ -108,7 +110,7 @@ a.border:hover{
 }
 
 #header{
-    height:600px;
+    height:550px;
     background: url(../images/header.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -126,24 +128,41 @@ a.border:hover{
     .quote{
         max-width: 400px;
         margin: 4em auto;
-      padding: 1em;
-      border: 1px solid $color-white;
-      border-radius: 5px;
-      background-color: rgba(31,60,71, 0.8);
-
+        padding: 1em;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        background-color: $fade-blue-80;
     }
 
-  @media (max-width: 991px) {
-    height: 680px;
-  }
+    @media (max-width: 991px) {
+        height: 630px;
+    }
+
+    #intro {
+        text-align: center;
+    }
+
+
+    @media(max-width: 600px) {
+        .tdt-button {
+            margin: .5em auto;
+            display: block;
+            width: 250px;
+        }
+
+    }
 }
 
 .seperator{
-  @include triforce(40px, $color-dark-white);
+    @include triforce(30px, $color-dark-white);
+    cursor: hand;
+    cursor: pointer;
 }
 
 .seperator-inv{
-  @include triforce-inv(40px, $color-dark-white);
+    @include triforce-inv(30px, $color-dark-white);
+    cursor: hand;
+    cursor: pointer;
 }
 
 #whowhat{
@@ -162,7 +181,7 @@ a.border:hover{
         margin: 40px 0px;
     }
 
-    .button{
+    .tdt-button{
         margin-top: 40px;
     }
 }
@@ -174,6 +193,15 @@ a.border:hover{
     -o-background-size: cover;
     background-size: cover;
     // padding-bottom: 80px;
+
+    .tdt-button {
+        margin-left: 0;
+        @media (max-width: 991px) {
+            margin-left: 20px;
+        }
+    }
+
+
 }
 
 #features{
@@ -228,6 +256,12 @@ a.border:hover{
             color: $color-white !important;
         }
     }
+}
+
+#get-started-container {
+    background-color: $color-white;
+    border-top: 1px solid darken($color-dark-white, 10);
+    padding: 50px 0px;
 }
 
 #quotes{
@@ -321,8 +355,51 @@ a.border:hover{
     overflow: hidden;
     z-index: 3;
 
+    .height{
+        height:50px;
+    }
 
+    .nav{
+        font-size:16px;
+        text-transform:uppercase;
+        color:white;
+        margin-top:10px;
+        margin-left: 1em;
+        margin-bottom: 0;
+        float: right;
 
+        .border{
+            padding:17px 17px 17px 17px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 10px;
+            border-color:$color-white;
+            border: solid 1px;
+        }
+    }
+
+    img.logo{
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    p.logo{
+        font-size:16px;
+        text-transform:uppercase;
+        color:white;
+        margin-top: 1em;
+        padding-left:24px;
+    }
+
+    @media(max-width: 768px) {
+        .nav {
+
+        }
+
+        p.logo {
+
+        }
+    }
 }
 
 .footeroverlay{
@@ -334,44 +411,7 @@ a.border:hover{
 }
 
 .logo{
-  float:left;
-}
-
-div.height{
-  height:120px;
-}
-
-img.logo{
-  padding-top:29px;
-  padding-bottom:29px;
-}
-
-p.logo{
-  font-size:16px;
-  text-transform:uppercase;
-  color:white;
-  padding-top:49px;
-  padding-left:24px;
-}
-
-p.nav{
-  font-size:16px;
-  text-transform:uppercase;
-  color:white;
-  margin-top:49px;
-}
-
-.special{
-    margin-left:40%
-}
-
-a.border{
-    padding:17px 17px 17px 17px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border-color:$color-white;
-    border: solid 1px;
+    float:left;
 }
 
 p.txt, form input{
@@ -411,26 +451,30 @@ p.tagline{
     margin-bottom: 40px;
 }
 
-.button{
+.tdt-button{
     font-size:16px;
     border: 0px;
     text-transform:uppercase;
-    background:$color-green;
+    border: 1px solid $color-white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
     margin-bottom: 40px;
-    padding: 16px 28px 16px 28px;
+    padding: 16px 28px;
     width:163px;
-
+    text-align: center;
 
     &:hover, &:focus{
-        background:$color-light-blue;
+        background-color: $fade-blue-80;
         color: $color-white;
         transition: .2s ease-in-out;
         -moz-transition: .2s ease-in-out;
         -webkit-transition: .2s ease-in-out;
         cursor:pointer;
+    }
+
+    &:not(:first-of-type) {
+        margin-left: 20px;
     }
 }
 
@@ -523,13 +567,12 @@ form input{
     border-color:white;
     border: solid 1px;
     font-size:14px;
-    text-transform:uppercase;
     width:100%;
     margin-bottom:8px;
 }
 
 form input:focus, form textarea:focus{
-    border-color:$color-green;
+    background-color: $fade-blue-80;
     transition: .2s ease-in-out;
     -moz-transition: .2s ease-in-out;
     -webkit-transition: .2s ease-in-out;
@@ -543,7 +586,6 @@ form textarea{
     border-radius: 5px;
     border-color:$color-white;
     font-size:14px;
-    text-transform:uppercase;
     width:100%;
     margin-bottom:8px;
     height:100px;
@@ -597,16 +639,6 @@ p.rght{
 
 
 @media (max-width: 991px) {
-    p.logo{
-        font-size:14px;
-    }
-
-    img.logo{
-        padding-top:20px;
-        padding-bottom:0px;
-        padding-left:20px;
-    }
-
     p.headline{
         font-size:30px;
         font-family: 'Varela Round', sans-serif;
@@ -625,13 +657,6 @@ p.rght{
         margin-right: 20px;
     }
 
-    p.nav{
-        padding-left:20px;
-        padding-top:0px;
-        padding-bottom:10px;
-        margin-top:20px;
-        font-size:14px;
-    }
     .special{
         margin-left:0%
     }
@@ -644,14 +669,10 @@ p.rght{
         height:100px;
     }
 
-    table{
-        float:left;
-        margin-left:20px;
-        width:70%
-    }
-
-    a.button{
+    table {
+        float: left;
         margin-left: 20px;
+        width: 70%
     }
 
     p.mrgn{
@@ -688,7 +709,7 @@ p.rght{
             margin: 30px 0px;
         }
 
-        .button{
+        .tdt-button{
             margin-left: 0px;
         }
     }
@@ -751,7 +772,7 @@ p.rght{
         margin: 0 20px 0 20px;
     }
 
-    input.button{
+    input.tdt-button{
         font-size:14px;
         margin: 10px 20px 0px 20px;
         padding: 8px 14px 8px 14px;

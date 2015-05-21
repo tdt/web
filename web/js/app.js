@@ -46,7 +46,6 @@ $(function() {
     });
 
     $( '.scroll' ).on('click', function(event) {
-        console.log("clicked");
         event.preventDefault();
         var target = "#" + $(this).data('target');
         var offs = $(target).offset().top-40;

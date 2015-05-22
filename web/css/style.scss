@@ -211,85 +211,78 @@ a.border:hover{
 
     i{
         padding: 0px 5px;
+        vertical-align: middle;
     }
 
     .txtinvert{
         margin-bottom: 20px;
     }
 
-    table{
-        tr{
-            td{
-                padding: 5px 0px;
-            }
+    .fblock {
+        padding: 1em;
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.8em;
+        }
+
+        i {
+            color: $color-green;
         }
     }
 
-    .tableinvert{
+    .fblockinvert {
         background: $color-blue;
         color: $color-white !important;
         padding: 1em;
-
-        tr{
-            td{
-                padding: 10px 20px;
-            }
-
-            &:first-child td{
-                padding-bottom: 0px;
-            }
-
-            &:nth-child(2) td{
-                padding-top: 0px;
-            }
-
-            &:last-child td{
-                padding-bottom: 20px;
-            }
-        }
-
-        i{
-            float: left;
-            margin-left: 0px;
-            padding-left: 0px;
-        }
 
         i, p{
             color: $color-white !important;
         }
     }
-}
 
-.milestone {
-    #milestone-title {
-        font-size: 1.5em;
-    }
 
-    blockquote {
-        padding: .5em 1em;
-    }
 
-    .progress-bar {
-        background-color: transparent;
-        border-radius: 2px;
-        border: 1px solid $color-white;
+    .milestone {
+        #milestone-title {
+            font-size: 1.5em;
+        }
 
-        width: 100%;
-        height: 20px;
+        blockquote {
+            padding: .5em 1em;
+        }
 
-        position: relative;
-        display: block;
-        margin-bottom: 1em;
-    }
+        .progress-bar {
+            background-color: transparent;
+            border-radius: 2px;
+            border: 1px solid $color-white;
+            width: 100%;
+            height: 20px;
+            position: relative;
+            display: block;
+            margin-bottom: 1em;
+            cursor: pointer;
+            cursor: hand;
+        }
 
-    .progress-bar > span {
-        margin-top: -1px;
-        margin-left: -1px;
-        background-color: $color-white;
-        border-radius: 2px;
+        .progress-bar > span {
+            margin-top: -1px;
+            margin-left: -1px;
+            background-color: $color-white;
+            border-radius: 2px;
+            text-indent: 1em;
+            white-space: nowrap;
+            display: block;
+            transition: 0.2s ease-in-out;
+            color: transparent;
+        }
 
-        display: block;
-        text-indent: -9999px;
+        .progress-bar:hover {
+            span {
+                background-color: rgba(255,255,255,0.33);
+                color: $color-white;
+            }
+        }
     }
 }
 
@@ -297,6 +290,11 @@ a.border:hover{
     background-color: $color-white;
     border-top: 1px solid darken($color-dark-white, 10);
     padding: 50px 0px;
+
+    i{
+        padding: 0px 5px;
+        vertical-align: middle;
+    }
 }
 
 #quotes{
@@ -632,12 +630,12 @@ form textarea{
 }
 
 form #name{
-    margin-top:62px;
+    margin-top:20px;
 }
 
 p.contact{
     font-size:18px;
-    margin-top: 62px;
+    margin-top: 20px;
     padding-left:20px;
 }
 
@@ -797,16 +795,11 @@ p.rght{
         width: auto;
     }
 
-    form #name{
-        margin-top:20px;
-    }
-
     form textarea{
         background:transparent;
         padding:8px 8px 8px 8px;
         width: auto;
         margin-bottom:8px;
-        height: 38px;
         margin: 0 20px 0 20px;
     }
 

@@ -2786,55 +2786,59 @@ a.border:hover {
 #features {
   padding: 50px 0px; }
   #features i {
-    padding: 0px 5px; }
+    padding: 0px 5px;
+    vertical-align: middle; }
   #features .txtinvert {
     margin-bottom: 20px; }
-  #features table tr td {
-    padding: 5px 0px; }
-  #features .tableinvert {
+  #features .fblock {
+    padding: 1em; }
+    #features .fblock p {
+      font-size: 1.5em;
+      line-height: 1.8em; }
+    #features .fblock i {
+      color: #36ab70; }
+  #features .fblockinvert {
     background: #1f3c47;
     color: #ffffff !important;
     padding: 1em; }
-    #features .tableinvert tr td {
-      padding: 10px 20px; }
-    #features .tableinvert tr:first-child td {
-      padding-bottom: 0px; }
-    #features .tableinvert tr:nth-child(2) td {
-      padding-top: 0px; }
-    #features .tableinvert tr:last-child td {
-      padding-bottom: 20px; }
-    #features .tableinvert i {
-      float: left;
-      margin-left: 0px;
-      padding-left: 0px; }
-    #features .tableinvert i, #features .tableinvert p {
+    #features .fblockinvert i, #features .fblockinvert p {
       color: #ffffff !important; }
-
-.milestone #milestone-title {
-  font-size: 1.5em; }
-.milestone blockquote {
-  padding: .5em 1em; }
-.milestone .progress-bar {
-  background-color: transparent;
-  border-radius: 2px;
-  border: 1px solid #ffffff;
-  width: 100%;
-  height: 20px;
-  position: relative;
-  display: block;
-  margin-bottom: 1em; }
-.milestone .progress-bar > span {
-  margin-top: -1px;
-  margin-left: -1px;
-  background-color: #ffffff;
-  border-radius: 2px;
-  display: block;
-  text-indent: -9999px; }
+  #features .milestone #milestone-title {
+    font-size: 1.5em; }
+  #features .milestone blockquote {
+    padding: .5em 1em; }
+  #features .milestone .progress-bar {
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
+    width: 100%;
+    height: 20px;
+    position: relative;
+    display: block;
+    margin-bottom: 1em;
+    cursor: pointer;
+    cursor: hand; }
+  #features .milestone .progress-bar > span {
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    text-indent: 1em;
+    white-space: nowrap;
+    display: block;
+    transition: 0.2s ease-in-out;
+    color: transparent; }
+  #features .milestone .progress-bar:hover span {
+    background-color: rgba(255, 255, 255, 0.33);
+    color: #ffffff; }
 
 #get-started-container, #projects {
   background-color: #ffffff;
   border-top: 1px solid #e5e5d3;
   padding: 50px 0px; }
+  #get-started-container i, #projects i {
+    padding: 0px 5px;
+    vertical-align: middle; }
 
 #quotes .logo {
   height: 100px;
@@ -3075,11 +3079,11 @@ form textarea {
   resize: vertical; }
 
 form #name {
-  margin-top: 62px; }
+  margin-top: 20px; }
 
 p.contact {
   font-size: 18px;
-  margin-top: 62px;
+  margin-top: 20px;
   padding-left: 20px; }
 
 a.footer {
@@ -3207,15 +3211,11 @@ p.rght {
     margin-right: 20px;
     width: auto; }
 
-  form #name {
-    margin-top: 20px; }
-
   form textarea {
     background: transparent;
     padding: 8px 8px 8px 8px;
     width: auto;
     margin-bottom: 8px;
-    height: 38px;
     margin: 0 20px 0 20px; }
 
   input.tdt-button {

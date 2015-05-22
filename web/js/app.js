@@ -70,7 +70,8 @@ $(function() {
             },
             error: function (e) {
                 console.log(e);
-            }
+            },
+            cache: true
         });
     }
 
@@ -78,18 +79,27 @@ $(function() {
         var monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"
         ];
-        console.log(ms);
 
+        var now = new Date();
         var dd = new Date(ms.due_on);
+        var timeLeft = dd - now;
+        timeLeft = Math.ceil(timeLeft / 1000 / 3600 / 24);
+        $('#timeleft').html("(" + timeLeft + " days left!)");
         var dateString = monthNames[dd.getMonth()] + " " + dd.getDate() + ", " + dd.getFullYear();
         $('#milestone-date').html(dateString);
         $('#milestone-desc').html(ms.description);
         $('#milestone-title').html(ms.title);
         $('#milestone-title').attr('href', ms.html_url);
+
         var progressPercent = ms.closed_issues / (ms.open_issues + ms.closed_issues) * 100;
         progressPercent = Math.floor(progressPercent);
         $('#milestone-progress').css('width', progressPercent +'%');
+        $('#milestone-progress').html('Issues: ' + ms.open_issues + ' open, ' + ms.closed_issues + ' closed');
+        $('#milestone-progress').parent().on('click', function() {
+            window.open(ms.html_url);
+        });
         $('.progress-percent').html(progressPercent + "%");
+
     }
 
 

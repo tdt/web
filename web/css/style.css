@@ -2751,10 +2751,10 @@ a.border:hover {
     position: absolute;
     width: 50%; }
   .seperator-inv:before {
-    border-right: 30px solid #f8f8f3;
+    border-right: 30px solid #ffffff;
     left: 0; }
   .seperator-inv:after {
-    border-left: 30px solid #f8f8f3;
+    border-left: 30px solid #ffffff;
     right: 0; }
 
 #whowhat {
@@ -2786,14 +2786,15 @@ a.border:hover {
 #features {
   padding: 50px 0px; }
   #features i {
-    padding: 0px 25px; }
+    padding: 0px 5px; }
   #features .txtinvert {
     margin-bottom: 20px; }
   #features table tr td {
     padding: 5px 0px; }
   #features .tableinvert {
     background: #1f3c47;
-    color: #ffffff !important; }
+    color: #ffffff !important;
+    padding: 1em; }
     #features .tableinvert tr td {
       padding: 10px 20px; }
     #features .tableinvert tr:first-child td {
@@ -2809,7 +2810,28 @@ a.border:hover {
     #features .tableinvert i, #features .tableinvert p {
       color: #ffffff !important; }
 
-#get-started-container {
+.milestone #milestone-title {
+  font-size: 1.5em; }
+.milestone blockquote {
+  padding: .5em 1em; }
+.milestone .progress-bar {
+  background-color: transparent;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  width: 100%;
+  height: 20px;
+  position: relative;
+  display: block;
+  margin-bottom: 1em; }
+.milestone .progress-bar > span {
+  margin-top: -1px;
+  margin-left: -1px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  display: block;
+  text-indent: -9999px; }
+
+#get-started-container, #projects {
   background-color: #ffffff;
   border-top: 1px solid #e5e5d3;
   padding: 50px 0px; }
@@ -2838,11 +2860,12 @@ a.border:hover {
     display: inline-block;
     margin-top: 20px; }
 
+#projects h3 {
+  margin-top: 10px; }
 #projects .logo {
   height: 75px;
   width: 100%;
-  text-align: center;
-  margin-bottom: 60px; }
+  text-align: center; }
   #projects .logo.a4e {
     background: url("../images/logo-appsforeurope.png") no-repeat;
     background-size: 150px;
@@ -3138,7 +3161,7 @@ p.rght {
     margin-right: 20px; }
 
   #whowhat h2 {
-    margin-top: 30px;
+    margin-top: 50px;
     padding-left: 20px; }
   #whowhat p {
     padding: 0px 20px;
@@ -3224,5 +3247,14 @@ p.rght {
 
   #projects .logo {
     margin-bottom: 5px; } }
+.row-no-padding-r [class*="col-"] {
+  padding-right: 0 !important; }
+
+.row-no-padding-l [class*="col-"] {
+  padding-left: 0 !important; }
+
+.row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */

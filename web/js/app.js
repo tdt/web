@@ -1,4 +1,7 @@
 $(function() {
+
+    loadMilestone();
+
     $('a[href^=#]').on("click", function (e) {
         var t = $(this.hash);
         var t = t.length && t || $('[name=' + this.hash.slice(1) + ']');
@@ -42,17 +45,53 @@ $(function() {
                 }
             });
         }
-
     });
 
-    $( '.scroll' ).on('click', function(event) {
+    $('.scroll').on('click', function(event) {
         event.preventDefault();
         var target = "#" + $(this).data('target');
         var offs = $(target).offset().top-40;
 
+        if($(this).hasClass('seperator-inv')) {
+            offs += 30;
+        }
 
         $('html, body').animate({
             scrollTop: offs
         }, 700);
     });
+
+    function loadMilestone() {
+        $.ajax({
+            url: 'https://api.github.com/repos/tdt/core/milestones',
+            method: 'GET',
+            success: function (data) {
+                renderMilestone(data[0]);
+            },
+            error: function (e) {
+                console.log(e);
+            }
+        });
+    }
+
+    function renderMilestone(ms){
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        console.log(ms);
+
+        var dd = new Date(ms.due_on);
+        var dateString = monthNames[dd.getMonth()] + " " + dd.getDate() + ", " + dd.getFullYear();
+        $('#milestone-date').html(dateString);
+        $('#milestone-desc').html(ms.description);
+        $('#milestone-title').html(ms.title);
+        $('#milestone-title').attr('href', ms.html_url);
+        var progressPercent = ms.closed_issues / (ms.open_issues + ms.closed_issues) * 100;
+        progressPercent = Math.floor(progressPercent);
+        $('#milestone-progress').css('width', progressPercent +'%');
+        $('.progress-percent').html(progressPercent + "%");
+    }
+
+
+
 });

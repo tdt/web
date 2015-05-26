@@ -5,9 +5,7 @@ $color-white: #ffffff;
 $color-dark-white: #f8f8f3;
 $color-green: #36ab70;
 $color-blue: #1f3c47;
-$color-light-blue: #b1bfc4;
 $fade-blue-80: rgba(31,60,71, 0.8);
-$fade-blue-60: rgba(31,60,71, 0.6);
 
 // Triangle call to action to scroll down generator
 @mixin triforce($size, $color){
@@ -241,7 +239,7 @@ strong{
 }
 
 #features{
-    padding: 50px 0px;
+    padding: 40px 0px;
 
     i{
         padding: 0px 5px;
@@ -329,15 +327,6 @@ strong{
     }
 }
 
-.preblock {
-    padding: 1em;
-
-    p {
-        font-size: 1.5em;
-        line-height: 1.8em;
-    }
-}
-
 #get-started-container {
     background-color: $color-white;
     border-top: 1px solid darken($color-dark-white, 10);
@@ -346,6 +335,15 @@ strong{
     i{
         padding: 0px 5px;
         vertical-align: middle;
+    }
+
+    .preblock {
+        padding: 1em;
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.8em;
+        }
     }
 }
 
@@ -557,12 +555,6 @@ form #name{
     margin-top:20px;
 }
 
-p.contact{
-    font-size:18px;
-    margin-top: 20px;
-    padding-left:20px;
-}
-
 .message{
     color: $color-white;
     margin-left: 10px;
@@ -631,12 +623,6 @@ p.contact{
         font-size:14px;
         margin: 10px 20px 0px 20px;
         padding: 8px 14px 8px 14px;
-    }
-
-    p.contact{
-        font-size:16px;
-        margin-top: 20px;
-        padding-left:0px;
     }
 
     #projects{

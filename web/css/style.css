@@ -2822,7 +2822,7 @@ strong {
     color: #ffffff; }
 
 #features {
-  padding: 50px 0px; }
+  padding: 40px 0px; }
   #features i {
     padding: 0px 5px;
     vertical-align: middle; }
@@ -2876,12 +2876,6 @@ strong {
     #preview p a:hover, #preview p a:active, #preview p a:focus {
       color: #36ab70; }
 
-.preblock {
-  padding: 1em; }
-  .preblock p {
-    font-size: 1.5em;
-    line-height: 1.8em; }
-
 #get-started-container {
   background-color: #ffffff;
   border-top: 1px solid #e5e5d3;
@@ -2889,6 +2883,11 @@ strong {
   #get-started-container i {
     padding: 0px 5px;
     vertical-align: middle; }
+  #get-started-container .preblock {
+    padding: 1em; }
+    #get-started-container .preblock p {
+      font-size: 1.5em;
+      line-height: 1.8em; }
 
 #quotes .logo {
   height: 100px;
@@ -3049,11 +3048,6 @@ form textarea {
 form #name {
   margin-top: 20px; }
 
-p.contact {
-  font-size: 18px;
-  margin-top: 20px;
-  padding-left: 20px; }
-
 .message {
   color: #ffffff;
   margin-left: 10px; }
@@ -3106,11 +3100,6 @@ p.contact {
     font-size: 14px;
     margin: 10px 20px 0px 20px;
     padding: 8px 14px 8px 14px; }
-
-  p.contact {
-    font-size: 16px;
-    margin-top: 20px;
-    padding-left: 0px; }
 
   #projects .logo {
     margin-bottom: 5px; } }

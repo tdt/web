@@ -69,7 +69,7 @@ $(function() {
                 renderMilestone(data[0]);
             },
             error: function (e) {
-                console.log(e);
+
             },
             cache: true
         });
@@ -87,6 +87,7 @@ $(function() {
         $('#timeleft').html("(" + timeLeft + " days left!)");
         var dateString = monthNames[dd.getMonth()] + " " + dd.getDate() + ", " + dd.getFullYear();
         $('#milestone-date').html(dateString);
+        $('#milestone-date').parent().removeClass("hide");
         $('#milestone-desc').html(ms.description);
         $('#milestone-title').html(ms.title);
         $('#milestone-title').attr('href', ms.html_url);
@@ -99,9 +100,13 @@ $(function() {
             window.open(ms.html_url);
         });
         $('.progress-percent').html(progressPercent + "%");
+        $('#progres-cont').removeClass("hide");
 
     }
 
-
+    $(".fancybox").fancybox({
+        openEffect	: 'none',
+        closeEffect	: 'none'
+    });
 
 });

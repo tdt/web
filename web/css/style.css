@@ -2665,6 +2665,7 @@ a {
   color: #36ab70; }
 
 h2 {
+  margin-top: 100px;
   font-size: 46px;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -2680,12 +2681,9 @@ h3 {
 strong {
   font-weight: 600; }
 
-a.border:hover {
-  border-color: #36ab70;
-  transition: .2s ease-in-out;
-  -moz-transition: .2s ease-in-out;
-  -webkit-transition: .2s ease-in-out; }
-
+@media (min-width: 991px) {
+  .container {
+    width: 999px; } }
 #header {
   height: 550px;
   background: url(../images/header.jpg) no-repeat center center fixed;
@@ -2706,16 +2704,18 @@ a.border:hover {
     border: 1px solid #ffffff;
     border-radius: 5px;
     background-color: rgba(31, 60, 71, 0.8); }
+  #header #intro {
+    text-align: center; }
   @media (max-width: 991px) {
     #header {
       height: 630px; } }
-  #header #intro {
-    text-align: center; }
   @media (max-width: 600px) {
     #header .tdt-button {
       margin: .5em auto;
       display: block;
-      width: 250px; } }
+      width: 250px; }
+    #header h1 {
+      margin-top: 50px; } }
 
 .seperator {
   height: 30px;
@@ -2757,6 +2757,26 @@ a.border:hover {
     border-left: 30px solid #ffffff;
     right: 0; }
 
+.seperator-inv2 {
+  height: 30px;
+  overflow: hidden;
+  position: relative;
+  top: 30px;
+  cursor: hand;
+  cursor: pointer; }
+  .seperator-inv2:before, .seperator-inv2:after {
+    border-bottom: 30px solid transparent;
+    bottom: 0;
+    content: " ";
+    position: absolute;
+    width: 50%; }
+  .seperator-inv2:before {
+    border-right: 30px solid #f8f8f3;
+    left: 0; }
+  .seperator-inv2:after {
+    border-left: 30px solid #f8f8f3;
+    right: 0; }
+
 #whowhat {
   height: 590px;
   background: url(../images/whowhat.jpg) no-repeat center center fixed;
@@ -2764,12 +2784,22 @@ a.border:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  #whowhat h2 {
-    margin-top: 130px; }
   #whowhat p {
     margin: 20px 0px; }
-  #whowhat .tdt-button {
+  #whowhat .whowhat {
+    font-size: 18px; }
+  #whowhat .btns {
+    text-align: center;
     margin-top: 40px; }
+  @media (max-width: 600px) {
+    #whowhat {
+      height: 800px; }
+      #whowhat .btns {
+        text-align: center; }
+        #whowhat .btns .tdt-button {
+          margin: .5em auto;
+          display: block;
+          width: 250px; } }
 
 #footer {
   background: url(../images/footer.jpg) no-repeat center center fixed;
@@ -2782,6 +2812,14 @@ a.border:hover {
     @media (max-width: 991px) {
       #footer .tdt-button {
         margin-left: 20px; } }
+  #footer h2 {
+    margin-top: 60px; }
+  #footer p {
+    font-size: 1.5em; }
+  #footer .footnote {
+    padding-top: 2em;
+    font-size: 1em;
+    color: #ffffff; }
 
 #features {
   padding: 50px 0px; }
@@ -2795,8 +2833,6 @@ a.border:hover {
     #features .fblock p {
       font-size: 1.5em;
       line-height: 1.8em; }
-    #features .fblock i {
-      color: #36ab70; }
   #features .fblockinvert {
     background: #1f3c47;
     color: #ffffff !important;
@@ -2832,11 +2868,25 @@ a.border:hover {
     background-color: rgba(255, 255, 255, 0.33);
     color: #ffffff; }
 
-#get-started-container, #projects {
+#preview p {
+  font-size: 1.5em;
+  line-height: 1.8em; }
+  #preview p a {
+    color: #1f3c47; }
+    #preview p a:hover, #preview p a:active, #preview p a:focus {
+      color: #36ab70; }
+
+.preblock {
+  padding: 1em; }
+  .preblock p {
+    font-size: 1.5em;
+    line-height: 1.8em; }
+
+#get-started-container {
   background-color: #ffffff;
   border-top: 1px solid #e5e5d3;
-  padding: 50px 0px; }
-  #get-started-container i, #projects i {
+  padding: 30px 0px; }
+  #get-started-container i {
     padding: 0px 5px;
     vertical-align: middle; }
 
@@ -2864,29 +2914,6 @@ a.border:hover {
     display: inline-block;
     margin-top: 20px; }
 
-#projects h3 {
-  margin-top: 10px; }
-#projects .logo {
-  height: 75px;
-  width: 100%;
-  text-align: center; }
-  #projects .logo.a4e {
-    background: url("../images/logo-appsforeurope.png") no-repeat;
-    background-size: 150px;
-    background-position: center; }
-  #projects .logo.ewi {
-    background: url("../images/logo-ewi.png") no-repeat;
-    background-size: 150px;
-    background-position: center; }
-  #projects .logo.antwerpen {
-    background: url("../images/logo-antwerpen.png") no-repeat;
-    background-size: 150px;
-    background-position: center; }
-  #projects .logo.westtoer {
-    background: url("../images/logo-westtoer.png") no-repeat;
-    background-size: 150px;
-    background-position: center; }
-
 .fa-quote-left {
   padding-right: 10px; }
 
@@ -2894,7 +2921,8 @@ a.border:hover {
   background: rgba(23, 52, 63, 0.75);
   overflow: hidden;
   height: 100%;
-  z-index: 2; }
+  z-index: 2;
+  padding-bottom: .5em; }
 
 .navoverlay {
   background: rgba(23, 52, 63, 0.8);
@@ -2927,13 +2955,6 @@ a.border:hover {
     margin-top: 1em;
     padding-left: 24px; }
 
-.footeroverlay {
-  background: rgba(23, 52, 63, 0.9);
-  overflow: hidden;
-  z-index: 3;
-  height: 80px;
-  line-height: 80px; }
-
 .logo {
   float: left; }
 
@@ -2942,23 +2963,6 @@ p.txt, form input {
 
 p.txtinvert {
   color: #1f3c47;
-  font-size: 18px; }
-
-p.headline {
-  font-size: 46px;
-  text-transform: uppercase;
-  margin-bottom: 0px; }
-
-p.margin-1 {
-  margin-top: 110px; }
-
-p.margin-2 {
-  margin-top: 120px; }
-
-p.margin-3 {
-  margin-top: 60px; }
-
-p.whowhat {
   font-size: 18px; }
 
 p.tagline {
@@ -2988,28 +2992,19 @@ p.tagline {
   .tdt-button:not(:first-of-type) {
     margin-left: 20px; }
 
+.tdt-button-inv {
+  color: #1f3c47;
+  border-color: #1f3c47; }
+
+.underline {
+  text-decoration: underline; }
+
 p.quote {
   font-size: 14px;
   margin-top: 60px; }
 
 .italic {
   font-style: italic; }
-
-table {
-  font-size: 18px; }
-
-div.margintop {
-  margin-top: 25px; }
-
-p.tabletitle {
-  text-align: left; }
-
-p.mrgn {
-  margin-left: 95px;
-  margin: auto;
-  margin-top: 20px;
-  line-height: 32px;
-  margin-bottom: 30px; }
 
 p.mrgn-2 {
   margin-top: 20px;
@@ -3018,33 +3013,6 @@ p.mrgn-2 {
 
 img.quote {
   margin-right: 33px; }
-
-p.center {
-  font-size: 18px;
-  text-align: center;
-  margin-top: 24px; }
-
-img.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 170px; }
-
-img.right {
-  float: right;
-  margin-right: 40px; }
-
-img.left {
-  margin-left: 40px; }
-
-p.right {
-  float: right; }
-
-p.cntr {
-  margin: 20px auto; }
-
-p.left {
-  margin-left: 40px; }
 
 form input {
   background: transparent;
@@ -3086,27 +3054,6 @@ p.contact {
   margin-top: 20px;
   padding-left: 20px; }
 
-a.footer {
-  text-transform: uppercase;
-  font-size: 15px; }
-
-p.cntr-2 {
-  text-align: center;
-  font-family: 'Varela Round', sans-serif;
-  color: #ffffff; }
-
-p.lft {
-  margin-left: 95px;
-  text-align: left;
-  font-family: 'Varela Round', sans-serif;
-  color: #ffffff; }
-
-p.rght {
-  margin-right: 95px;
-  text-align: right;
-  font-family: 'Varela Round', sans-serif;
-  color: #ffffff; }
-
 .message {
   color: #ffffff;
   margin-left: 10px; }
@@ -3115,14 +3062,6 @@ p.rght {
   display: none; }
 
 @media (max-width: 991px) {
-  p.headline {
-    font-size: 30px;
-    font-family: 'Varela Round', sans-serif;
-    color: #ffffff;
-    margin-left: 20px;
-    margin-top: 44px;
-    text-transform: uppercase; }
-
   p.txt, form input {
     margin-left: 20px; }
 
@@ -3130,80 +3069,25 @@ p.rght {
     font-size: 16px;
     margin-right: 20px; }
 
-  .special {
-    margin-left: 0%; }
-
-  a.border {
-    border: none;
-    padding: 0 0 0 0; }
-
   div.height {
     height: 100px; }
-
-  table {
-    float: left;
-    margin-left: 20px;
-    width: 70%; }
-
-  p.mrgn {
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px; }
 
   img.quote {
     margin-left: 0px;
     margin-right: 12px; }
 
-  p.headline-2 {
-    font-size: 30px;
-    margin-left: 20px;
-    margin-top: 45px; }
+  h2 {
+    margin-top: 50px; }
 
-  p.whowhat {
-    font-size: 16px;
-    margin-left: 20px;
-    margin-right: 20px; }
-
-  #whowhat h2 {
-    margin-top: 50px;
-    padding-left: 20px; }
   #whowhat p {
-    padding: 0px 20px;
+    padding: 0px;
     margin: 20px 0px; }
   #whowhat .tdt-button {
     margin-left: 0px; }
-
-  img.right, img.center, img.left {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 170px;
-    float: none;
-    margin-bottom: 20px; }
-
-  p.mrgn-2 {
-    margin-top: 20px;
-    line-height: 32px;
-    margin-bottom: 20px; }
-
-  p.right {
-    float: none;
+  #whowhat .whowhat {
+    font-size: 16px;
     margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%; }
-
-  p.cntr {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%; }
-
-  p.left {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%; }
-
-  p.margin-3 {
-    margin-top: 26px; }
+    margin-right: 20px; }
 
   form input {
     padding: 8px 8px 8px 8px;
@@ -3227,23 +3111,6 @@ p.rght {
     font-size: 16px;
     margin-top: 20px;
     padding-left: 0px; }
-
-  .footeroverlay {
-    height: 160px;
-    padding-top: 20px;
-    line-height: 20px; }
-
-  p.cntr-2 {
-    text-align: left;
-    margin-left: 20px; }
-
-  p.lft {
-    margin-left: 20px;
-    text-align: left; }
-
-  p.rght {
-    margin-left: 20px;
-    text-align: left; }
 
   #projects .logo {
     margin-bottom: 5px; } }

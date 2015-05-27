@@ -2908,6 +2908,9 @@ strong {
     #get-started-container .preblock p {
       font-size: 1.5em;
       line-height: 1.8em; }
+  #get-started-container .sup-datatypes > div {
+    padding-top: 3px;
+    padding-bottom: 3px; }
 
 #quotes .logo {
   height: 100px;

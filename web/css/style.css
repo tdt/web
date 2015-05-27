@@ -2812,6 +2812,8 @@ strong {
     margin-top: 60px; }
   #footer p {
     font-size: 1.5em; }
+  #footer .flink {
+    white-space: nowrap; }
   #footer .footnote {
     padding-top: 1em;
     font-size: 1em; }
@@ -2910,7 +2912,9 @@ strong {
       line-height: 1.8em; }
   #get-started-container .sup-datatypes > div {
     padding-top: 3px;
-    padding-bottom: 3px; }
+    padding-bottom: 3px;
+    padding-right: 0px;
+    white-space: nowrap; }
 
 #quotes .logo {
   height: 100px;

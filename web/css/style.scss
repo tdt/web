@@ -214,14 +214,8 @@ strong{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    color: $color-white;
     // padding-bottom: 80px;
-
-    .tdt-button {
-        margin-left: 0;
-        @media (max-width: 991px) {
-            margin-left: 20px;
-        }
-    }
 
     h2 {
         margin-top: 60px;
@@ -232,9 +226,41 @@ strong{
     }
 
     .footnote {
-        padding-top: 2em;
+        padding-top: 1em;
         font-size: 1em;
-        color: $color-white;
+    }
+
+    .quote{
+        margin-top: 0;
+        margin-bottom: 2em;
+        padding: 1em;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        background-color: $fade-blue-80;
+        font-size: 1em;
+
+        .title {
+            display: block;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+    .footerimg {
+        padding-bottom: 1em;
+        text-align: center;
+
+        img {
+            height: 100px;
+        }
+
+        @media (min-width: 768px) {
+            text-align: left;
+            img {
+                padding: 0;
+                margin: 0;
+            }
+        }
     }
 }
 

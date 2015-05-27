@@ -1,0 +1,687 @@
+@import 'bootstrap';
+@import 'font-awesome';
+
+$color-white: #ffffff;
+$color-dark-white: #f8f8f3;
+$color-green: #36ab70;
+$color-blue: #1f3c47;
+$fade-blue-80: rgba(31,60,71, 0.8);
+
+// Triangle call to action to scroll down generator
+@mixin triforce($size, $color){
+    height:$size;
+    overflow:hidden;
+    position:relative;
+    top: -$size;
+    &:before, &:after{
+        border-bottom: $size solid $color;
+        bottom:0;
+        content:" ";
+        position:absolute;
+        width:50%;
+    }
+    &:before{
+        border-right: $size solid transparent;
+        left:0;
+    }
+    &:after{
+        border-left: $size solid transparent;
+        right:0;
+    }
+}
+
+@mixin triforce-inv($size, $color){
+    height:$size;
+    overflow:hidden;
+    position:relative;
+    top: $size;
+    &:before, &:after{
+        border-bottom: $size solid transparent;
+        bottom:0;
+        content:" ";
+        position:absolute;
+        width:50%;
+    }
+    &:before{
+        border-right: $size solid $color;
+        left:0;
+    }
+    &:after{
+        border-left: $size solid $color;
+        right:0;
+    }
+}
+
+*{
+    outline: none !important;
+    font-family: 'Varela Round', 'Helvetica', sans-serif;
+}
+
+html, .bg{
+    background: $color-dark-white;
+}
+
+a{
+    text-decoration:none;
+    color:$color-white;
+
+    &:hover, &:focus{
+        color: $color-green;
+        text-decoration:none;
+        transition: .2s ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+    }
+
+    i{
+        margin-right: 5px;
+    }
+}
+
+.green{
+    color: $color-green;
+}
+
+h2{
+    margin-top: 100px;
+    font-size:46px;
+    text-transform:uppercase;
+    margin-bottom: 20px;
+    color: $color-white;
+}
+
+h3{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+strong{
+    font-weight: 600;
+}
+
+@media (min-width: 991px) {
+    .container {
+        width: 999px;
+    }
+}
+
+#header{
+    height:550px;
+    background: url(../images/header.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    h1{
+        font-size:46px;
+        text-transform:uppercase;
+        margin-bottom: 0px;
+        color: $color-white;
+        margin-top: 90px;
+    }
+
+    .quote{
+        max-width: 400px;
+        margin: 4em auto;
+        padding: 1em;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        background-color: $fade-blue-80;
+    }
+
+    #intro {
+        text-align: center;
+    }
+
+    @media (max-width: 991px) {
+        height: 630px;
+    }
+
+    @media(max-width: 600px) {
+        .tdt-button {
+            margin: .5em auto;
+            display: block;
+            width: 250px;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+    }
+}
+
+.seperator{
+    @include triforce(30px, $color-dark-white);
+    cursor: hand;
+    cursor: pointer;
+}
+
+.seperator-inv{
+    @include triforce-inv(30px, $color-white);
+    cursor: hand;
+    cursor: pointer;
+}
+
+
+.seperator-inv2{
+    @include triforce-inv(30px, $color-dark-white);
+    cursor: hand;
+    cursor: pointer;
+}
+
+#whowhat{
+    height:590px;
+    background: url(../images/whowhat.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    p{
+        margin: 20px 0px;
+    }
+
+    .whowhat{
+        font-size: 18px;
+    }
+
+    .btns {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    @media(max-width: 600px) {
+        height: 800px;
+
+        .btns {
+            text-align: center;
+            .tdt-button {
+                margin: .5em auto;
+                display: block;
+                width: 250px;
+            }
+        }
+    }
+}
+
+#footer{
+    background: url(../images/footer.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: $color-white;
+    // padding-bottom: 80px;
+
+    h2 {
+        margin-top: 60px;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .footnote {
+        padding-top: 1em;
+        font-size: 1em;
+    }
+
+    .quote{
+        margin-top: 0;
+        margin-bottom: 2em;
+        margin-top: 20px;
+        padding: 1em;
+        border: 1px solid $color-white;
+        border-radius: 5px;
+        background-color: $fade-blue-80;
+        font-size: 1em;
+
+        .title {
+            display: block;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+    .footerimg {
+        padding-bottom: 1em;
+
+        margin-top: 20px;
+        text-align: center;
+
+        img {
+            height: 100px;
+        }
+
+        @media (min-width: 768px) {
+            text-align: left;
+            img {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#features{
+    padding: 40px 0px;
+
+    i{
+        padding: 0px 5px;
+        vertical-align: middle;
+    }
+
+    .txtinvert{
+        margin-bottom: 20px;
+    }
+
+    .fblock {
+        padding: 1em;
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.8em;
+        }
+    }
+
+    .fblockinvert {
+        background: $color-blue;
+        color: $color-white !important;
+        padding: 1em;
+
+        i, p{
+            color: $color-white !important;
+        }
+    }
+
+    .milestone {
+        #milestone-title {
+            font-size: 1.5em;
+        }
+
+        blockquote {
+            padding: .5em 1em;
+        }
+
+        .progress-bar {
+            background-color: transparent;
+            border-radius: 2px;
+            border: 1px solid $color-white;
+            width: 100%;
+            height: 20px;
+            position: relative;
+            display: block;
+            margin-bottom: 1em;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        .progress-bar > span {
+            margin-top: -1px;
+            margin-left: -1px;
+            background-color: $color-white;
+            border-radius: 2px;
+            text-indent: 1em;
+            white-space: nowrap;
+            display: block;
+            transition: 0.2s ease-in-out;
+            color: transparent;
+        }
+
+        .progress-bar:hover {
+            span {
+                background-color: rgba(255,255,255,0.33);
+                color: $color-white;
+            }
+        }
+    }
+}
+
+#preview {
+    p {
+        font-size: 1.5em;
+        line-height: 1.8em;
+
+        a {
+            color: $color-blue;
+
+            &:hover, &:active, &:focus {
+                color: $color-green;
+            }
+        }
+    }
+}
+
+#get-started-container {
+    background-color: $color-white;
+    border-top: 1px solid darken($color-dark-white, 10);
+    padding: 30px 0px;
+
+    i{
+        padding: 0px 5px;
+        vertical-align: middle;
+    }
+
+    .preblock {
+        padding: 1em;
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.8em;
+        }
+    }
+
+    .sup-datatypes > div {
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+}
+
+#quotes{
+    .logo{
+        height: 100px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+
+        &.gent{
+            background: url('../images/logo-gent.png') no-repeat;
+            background-size: 200px;
+            background-position: center;
+        }
+
+        &.leiedal{
+            background: url('../images/logo-leiedal.png') no-repeat;
+            background-size: 200px;
+            background-position: center;
+        }
+
+        &.zeropoint{
+            background: url('../images/logo-zeropoint.png') no-repeat;
+            background-size: 200px;
+            background-position: center;
+        }
+    }
+
+    & > div{
+        padding-left: 40px;
+        text-align: center;
+
+        p{
+            span{
+                display: inline-block;
+                margin-top: 20px;
+            }
+        }
+    }
+
+}
+
+.fa-quote-left{
+    padding-right: 10px;
+}
+
+.overlay{
+    background: rgba(23,52,63,0.75);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+    padding-bottom: .5em;
+}
+
+
+.navoverlay{
+    background: rgba(23,52,63,0.80);
+    overflow: hidden;
+    z-index: 3;
+
+    .height{
+        height:50px;
+    }
+
+    .nav{
+        font-size:16px;
+        text-transform:uppercase;
+        color:white;
+        margin-top:10px;
+        margin-left: 1em;
+        margin-bottom: 0;
+        float: right;
+
+        .border{
+            padding:17px 17px 17px 17px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 10px;
+            border-color:$color-white;
+            border: solid 1px;
+        }
+    }
+
+    img.logo{
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    p.logo{
+        font-size:16px;
+        text-transform:uppercase;
+        color:white;
+        margin-top: 1em;
+        padding-left:24px;
+    }
+}
+
+.logo{
+    float:left;
+}
+
+p.txt, form input{
+    color:$color-white;
+}
+
+p.txtinvert{
+    color:$color-blue;
+    font-size:18px;
+}
+
+p.tagline{
+    font-size:22px;
+    font-weight:300;
+    margin-bottom: 40px;
+}
+
+.tdt-button{
+    font-size:16px;
+    border: 0px;
+    text-transform:uppercase;
+    border: 1px solid $color-white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    padding: 16px 28px;
+    width:163px;
+    text-align: center;
+
+    &:hover, &:focus{
+        background-color: $fade-blue-80;
+        color: $color-white;
+        transition: .2s ease-in-out;
+        -moz-transition: .2s ease-in-out;
+        -webkit-transition: .2s ease-in-out;
+        cursor:pointer;
+    }
+
+    &:not(:first-of-type) {
+        margin-left: 20px;
+    }
+}
+
+.tdt-button-inv {
+    color: $color-blue;
+    border-color: $color-blue;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+p.quote{
+    font-size:14px;
+    margin-top:60px;
+}
+
+.italic{
+    font-style:italic;
+}
+
+p.mrgn-2{
+    margin-top:20px;
+    line-height:32px;
+    margin-bottom:30px;
+}
+
+img.quote{
+    margin-right:33px;
+}
+
+form input{
+    background:transparent;
+    padding:12px 12px 12px 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-color:white;
+    border: solid 1px;
+    font-size:14px;
+    width:100%;
+    margin-bottom:8px;
+}
+
+form input:focus, form textarea:focus{
+    background-color: $fade-blue-80;
+    transition: .2s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -webkit-transition: .2s ease-in-out;
+}
+
+form textarea{
+    background:transparent;
+    padding:12px 12px 12px 12px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-color:$color-white;
+    font-size:14px;
+    width:100%;
+    margin-bottom:8px;
+    height:100px;
+    color:$color-white;
+    resize: vertical;
+}
+
+form #name{
+    margin-top:20px;
+}
+
+.message{
+    color: $color-white;
+    margin-left: 10px;
+}
+
+.hide{
+    display: none;
+}
+
+@media (max-width: 991px) {
+    p.txt, form input{
+        margin-left:20px;
+    }
+
+    p.tagline{
+        font-size:16px;
+        margin-right: 20px;
+    }
+
+    div.height{
+        height:100px;
+    }
+
+    img.quote{
+        margin-left:0px;
+        margin-right:12px;
+    }
+
+    h2{
+        margin-top: 50px;
+    }
+
+    #whowhat{
+        p{
+            padding: 0px;
+            margin: 20px 0px;
+        }
+
+        .tdt-button{
+            margin-left: 0px;
+        }
+
+        .whowhat{
+            font-size:16px;
+            margin-left:20px;
+            margin-right: 20px;
+        }
+    }
+
+    form input{
+        padding:8px 8px 8px 8px;
+        font-size:14px;
+        margin-right: 20px;
+        width: auto;
+    }
+
+    form textarea{
+        background:transparent;
+        padding:8px 8px 8px 8px;
+        width: auto;
+        margin-bottom:8px;
+        margin: 0 20px 0 20px;
+    }
+
+    input.tdt-button{
+        font-size:14px;
+        margin: 10px 20px 0px 20px;
+        padding: 8px 14px 8px 14px;
+    }
+
+    #projects{
+        .logo{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+// Bootstrap overrides to have columns without padding on either side.
+.row-no-padding-r {
+    [class*="col-"] {
+        padding-right: 0 !important;
+    }
+}
+
+.row-no-padding-l {
+    [class*="col-"] {
+        padding-left: 0 !important;
+    }
+}
+
+.row-no-padding {
+    [class*="col-"] {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "@id": "http://thedatatank.com/#organization",
+  "name": "The Datatank",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ghent, Belgium",
+    "postalCode": "9050",
+    "streetAddress": "Gaston Crommenlaan 8"
+  }
+}

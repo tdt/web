@@ -3,19 +3,21 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>The DataTank &dash; New Version - Professional Support</title>
+    <title>The DataTank &dash; Transform your datasets into a RESTful API</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="description" content="The DataTank always fetches the latest version of the data from its source to publish it on cacheable HTTP resources, limiting the processing power needed from your server.">
+    <meta name="keywords" content="TDT, Restful API, data, datasets, dcat">
+    <meta name="author" content="Open Knowledge Belgium, The Datatank Team">
+    <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css">
     <link rel="stylesheet" href="css/style.css">
-
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-
-    <link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+    <script language="application/ld+json" src="tdt.json"></script>
 
     <script type="text/javascript">
         var $buoop = {vs:{i:8,f:15,o:11,s:4,n:9}}
@@ -33,223 +35,264 @@
     <div id="header">
         <div class="overlay">
             <div class="navoverlay">
-                <div class='container'>
-                    <div class='row'>
-                        <div class="col-md-8 height">
-                            <img src="images/logo.png" alt="logo the datank" class="logo"/>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-5 height">
+                            <img src="images/logo.png" alt="logo the Datatank" class="logo"/>
                             <p class="logo">The DataTank</p>
                         </div>
-                        <div class="col-md-2">
-                            <p class="nav special"><a href="https://github.com/tdt/" target="_blank"><i class='fa fa-github'></i> Github</a></p>
-                        </div>
-                        <div class="col-md-2">
-                            <p class="nav"><a href="http://docs.thedatatank.com" class="border" target="_blank">Documentation</a></p>
+                        <div class="col-xs-7">
+                            <p class="nav"><a href="http://docs.thedatatank.com" target="_blank" title="Documentation"><i class="fa fa-book fa-2x"></i></a></p>
+                            <p class="nav"><a href="https://github.com/tdt/" target="_blank" title="GitHub"><i class="fa fa-github fa-2x"></i></a></p>
+                            <p class="nav"><a href="https://twitter.com/thedatatank" target="_blank" title="Twitter"><i class="fa fa-twitter fa-2x"></i></a></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <div class="row">
+                <div class="row" id="intro">
                     <h1>The Datatank</h1>
-                    <p class="txt tagline">We're taking it to the next level. New version. Professional support.</p>
-                    <a class="txt button transition" href="#features">Learn more</a>
+                    <p class="txt tagline">Transform your datasets into a RESTful API.</p>
+                    <a class="txt tdt-button" href="https://github.com/tdt/"><i class="fa fa-github"></i> Github</a>
+                    <a class="txt tdt-button" href="http://demo.thedatatank.com/" target="_blank"><i class="fa fa-eye"></i> Demo</a>
+                    <a class="txt tdt-button" href="http://docs.thedatatank.com"><i class="fa fa-book"></i> Documentation</a>
                     <p class="txt quote">
-                        <span class="italic">The DataTank is open source software, just like CKAN, Drupal or Elastic Search, which you can use to transform any dataset into an HTTP API.</span>
+                        <span class="italic">The DataTank always fetches the <strong>latest version</strong> of the data from its source to publish it on cacheable HTTP resources, limiting the processing power needed from your server.</span>
                     </p>
                 </div>
             </div>
         </div>
+        <div class="clearfix"></div>
+        <div class="seperator scroll" data-target="features"></div>
     </div>
+
     <div class="bg">
         <div class="container">
-            <div  id="features" class="row">
-                <section class="transition">
-                    <div class="col-md-4 col-md-offset-2">
-                        <table>
-                            <tr>
-                                <td><p class="txtinvert italic">What we already did..</p></td>
-                            </tr>
-                            <tr>
-                                <td>Open source project</td>
-                                <td><i class='fa fa-2x fa-check-circle green'></i></td>
-                            </tr>
-                            <tr>
-                                <td>Simple API &amp; adapter</td>
-                                <td><i class='fa fa-2x fa-check-circle green'></i></td>
-                            </tr>
-                            <tr>
-                                <td>Five stars of open data</td>
-                                <td><i class='fa fa-2x fa-check-circle green'></i></td>
-                            </tr>
-                        </table>
+            <div id="features" class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1">
+                    <div class="fblock">
+                        <p class="txtinvert italic">Features</p>
+                        <p><i class="fa fa-check-circle fa-2x"></i> <span>DCAT-AP for metadata</span></p>
+                        <p><i class="fa fa-check-circle fa-2x"></i> <span>Best-effort HTML views</span></p>
+                        <p><i class="fa fa-check-circle fa-2x"></i> <span>No data replication needed</span></p>
                     </div>
-                    <div class="col-md-4">
-                        <table class="tableinvert">
-                            <tr>
-                                <td><p class="txtinvert italic">What's new?</p></td>
-                            </tr>
-                            <tr>
-                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>Long term support releases with SLA's</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class='fa fa-2x fa-plus-circle green'></i><strong>Hosted instances</strong></td>
-                            </tr>
-                            <tr>
-                                <td><i class='fa fa-2x fa-plus-circle green'></i> <strong>Custom requests</strong></td>
-                            </tr>
-                        </table>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0">
+                    <div class="fblockinvert milestone">
+                        <p class="txtinvert italic">Our release cycle <span id="timeleft"></span></p>
+                        <p><a href="" id="milestone-title">No planned milestone (yet!)</a></p>
+                        <div class="row row-no-padding-r hide" id="progres-cont">
+                            <div class="col-xs-9">
+                                <div class="progress-bar">
+                                    <span style="width: 0%;" id="milestone-progress">&nbsp;</span>
+                                </div>
+                            </div>
+                            <div class="progress-percent col-xs-3"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <blockquote id="milestone-desc">
+                            At the moment there is no milestone planned. We have a bi-annual release schedule, so stay tuned for more info soon.
+                        </blockquote>
+                        <div class="duedate hide"><i class="fa fa-calendar fa-2x"></i> Due by <span id="milestone-date">TBA</span></div>
                     </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>
+    <div class="bg" id="get-started-container">
+        <div class="container">
+            <div id="get-started" class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-1" id="preview">
+                    <div class="preblock">
+                        <p class="txtinvert italic">See for yourself</p>
+                        <div class="row">
+                            <div class="col-xs-12">
+                               <p>
+                                   <i class="fa fa-2x fa-chevron-circle-right green"></i> <strong><a class="fancybox" rel="gallery1" href="images/screenshots/SS4.png" title="Front End: datasets overview">
+                                    Front End preview
+                                    </a></strong>
+                                    <a class="fancybox" rel="gallery1" href="images/screenshots/SS5.png" title="Front End: dataset detail view"></a>
+                               </p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>
+                                    <i class="fa fa-2x fa-chevron-circle-right green"></i> <strong><a class="fancybox" rel="gallery2" href="images/screenshots/SS1.png" title="Back End: datasets overview">
+                                    Back End preview
+                                    </a></strong>
+                                    <a class="fancybox" rel="gallery2" href="images/screenshots/SS2.png" title="Back End: overview users"></a>
+                                    <a class="fancybox" rel="gallery2" href="images/screenshots/SS3.png" title="Back End: new dataset view"></a>
+                                </p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>
+                                    <i class="fa fa-2x fa-chevron-circle-right green"></i> <strong><a  href="http://demo.thedatatank.com/" target="_blank" target="_blank">Try the demo!</a></strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-10 col-xs-offset-1 col-md-5 col-md-offset-0">
+                    <div class="preblock">
+                        <p class=" italic">Supported datatypes at input</p>
+                        <div class="row sup-datatypes">
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>CSV and XLS files</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>JSON files</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>XML files</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>RDF formats</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>JSON-LD files</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>SPARQL stores</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>SHP files</strong></div>
+                            <div class="col-xs-6"><i class="fa fa-2x fa-plus-circle "></i> <strong>MySQL stores</strong></div>
+                            <div class="col-xs-12"><i class="fa fa-2x fa-dot-circle-o"></i> <strong>Extend it with your own source readers</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="seperator-inv scroll" data-target="whowhat"></div>
 
     <div id="whowhat">
         <div class="overlay">
             <div class="container">
                 <div class="row">
-                    <h2>Who &amp; What</h2>
-                    <p class="txt whowhat">
-                        The DataTank is a RESTful data management system written in PHP5. It's ready to be your customised datahub inside your organisation that enables publishing several data formats into web readable formats. The software is managed by OKFN Belgium.
-                    </p>
-
-                    <p class="txt whowhat">
-                        A professional service is guaranteed by our core team of developers. To help us lifting The DataTank to the next level, join our user group of enthusiasts who meet regularly to decide the next priorities of The DataTank development.
-                    </p>
-
-                    <p>
-                        <a class="txt button" href="http://demo.thedatatank.com/" target="_blank">Demo</a>
-                    </p>
+                    <div class="col-sm-12">
+                        <h2>Built by the community</h2>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="txt whowhat">
+                            The DataTank is a RESTful data management system written in PHP5. It's ready to be your customised datahub inside your organisation that enables publishing several data formats into web readable formats. The software is managed by <a class="underline" href="http://www.openknowledge.be/" target="_blank">Open Knowledge Belgium</a>.
+                        </p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="txt whowhat">
+                            A professional service is guaranteed by our core team of developers. To help us lifting The DataTank to the next level, join our user group of enthusiasts who meet regularly to decide the next priorities of The DataTank development.
+                        </p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="txt whowhat">
+                            You can always get in touch on one of the platforms below, don't hesitate to contact us if you're interested or have any questions.
+                        </p>
+                    </div>
+                    <div class="col-sm-12">
+                        <p class="txt whowhat btns">
+                            <a class="txt tdt-button transition" href="https://github.com/tdt/" target="_blank"><i class="fa fa-github"></i> Github</a>
+                            <a class="txt tdt-button transition" href="https://twitter.com/thedatatank" target="_blank"><i class="fa fa-twitter"></i> Twitter</a>
+                            <a class="txt tdt-button transition" href="https://gitter.im/tdt/core" target="_blank"><i class="fa fa-comments"></i> Gitter</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="seperator scroll" data-target="quotes-container"></div>
     </div>
 
-    <div class="bg ">
-        <div class="container">
+    <div class="bg">
+        <div class="container" id="quotes-container">
             <div class="row">
-                <div class='col-sm-12'>
-                    <h3 class='text-center'>
-                        Quotes from the community
+                <div class="col-sm-12">
+                    <h3 class="text-center">
+                        Quotes
                     </h3>
                 </div>
             </div>
-            <div id="quotes" class='row'>
+            <div id="quotes" class="row">
                 <div class="col-md-4">
-                    <a href='https://zeropoint.it' class='logo zeropoint'></a>
+                    <a href="https://zeropoint.it" class="logo zeropoint"></a>
 
                     <p class="txtinvert mrgn-2">
-                        <i class='fa fa-2x fa-quote-left'></i>
+                        <i class="fa fa-2x fa-quote-left"></i>
                         When I started The DataTank in 2008, I was aiming for the moon. Today
                         I'm so excited realising that this community wants no less. Together,
                         they are working awfully hard on publishing data into this world.
-
+                        <br>
                         <span class="italic">&mdash; Bart Van Loon, Zeropoint.it</span>
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <a href='http://gent.be' class='logo gent'></a>
+                    <a href="http://gent.be" class="logo gent"></a>
 
                     <p class="txtinvert mrgn-2">
-                        <i class='fa fa-2x fa-quote-left'></i>
+                        <i class="fa fa-2x fa-quote-left"></i>
                         The DataTank grows with your open data experience.
                         Introducing it in your company helps you to take next steps to more usable data.
-
+                        <br>
                         <span class="italic">&mdash; Bart Rosseau, City of Ghent</span>
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <a href='http://www.leiedal.be/' class='logo leiedal'></a>
+                    <a href="http://www.leiedal.be/" class="logo leiedal"></a>
 
                     <p class="txtinvert mrgn-2">
-                        <i class='fa fa-2x fa-quote-left'></i>
+                        <i class="fa fa-2x fa-quote-left"></i>
                         Since we integrated The DataTank within our information management systems, it became crystal clear that this data publisher was the enabler to make the Open Data story happen in our region.
-
-
+                        <br>
                         <span class="italic">&mdash; Wouter Degadt, Leiedal</span>
                     </p>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div id='projects' class="bg">
-        <div class="container">
-            <div class="row">
-                <div class='col-sm-12'>
-                    <h3 class='text-center'>
-                        A couple of our projects
-                    </h3>
-                </div>
-            </div>
-            <div class='row'>
-                <div class="col-md-3">
-                    <a href='http://www.appsforeurope.eu/' class='logo a4e'></a>
-                </div>
-                <div class="col-md-3">
-                    <a href='http://www.ewi-vlaanderen.be/' class='logo ewi'></a>
-                </div>
-                <div class="col-md-3">
-                    <a href='http://opendata.antwerpen.be/' class='logo antwerpen'></a>
-                </div>
-                <div class="col-md-3">
-                    <a href='http://www.westtoer.be' class='logo westtoer'></a>
-                </div>
-            </div>
-        </div>
+        <!--<div class="seperator-inv2 scroll" data-target="footer"></div>-->
     </div>
 
     <div id="footer">
         <div class="overlay">
             <div class="container">
                 <div class="row">
-                    <div class='col-sm-12'>
-                        <p class="txt headline margin-3">Get in touch</p>
-                        <p class='txt'>Interested in our product? Got questions, or other inquiries?</p>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <form id='contact' name="contact" method="post" action="">
-                                    <input type="text" name="name" id="name" placeholder="Name"/><br/>
-                                    <input type="email" name="email" id="email" placeholder="Email"/><br/>
-                                    <textarea name="text" id="text" placeholder="Text"></textarea><br/>
-                                    <input type="submit" value="Send" class="button" />
-                                    <span class='message hide'>Mail sent successfully!</span>
-                                </form>
-                            </div>
-                            <div class="col-md-8">
-                                <p class="txt contact">The DataTank <br/><br/>
-                                <span class="italic">Zuiderpoort Office park<br/>
-                                Gaston Crommenlaan 8<br/>
-                                9050 Ghent<br />
-                                Belgium</span></p>
-                            </div>
-                        </div>
+                    <div class="col-sm-12">
+                        <h2>Join the community!</h2>
                     </div>
-
                 </div>
-            </div>
-        </div>
-        <div class="footeroverlay">
-            <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
-                        <p class="lft">
-                            <a href="https://twitter.com/TheDataTank" target="_blank" class="footer"><i class='fa fa-twitter'></i> Twitter</a>
+                    <div class="col-xs-6 col-md-4">
+                        <p>
+                            <a href="https://github.com/tdt/" target="_blank" class="footer"><i class="fa fa-github"></i> Github</a>
                         </p>
                     </div>
-                    <div class="col-md-3">
-                        <p class="cntr-2">
-                            <a href="https://github.com/tdt/" target="_blank" class="footer"><i class='fa fa-github'></i> Github</a>
+                    <div class="col-xs-6 col-md-4">
+                        <p>
+                            <a href="https://twitter.com/TheDataTank" target="_blank" class="footer"><i class="fa fa-twitter"></i> Twitter</a>
                         </p>
                     </div>
-                    <div class="col-md-3">
-                        <p class="cntr-2">
-                            <a href="http://docs.thedatatank.com" target="_blank" class="footer">Documentation</a>
+                    <div class="col-xs-6 col-md-4">
+                        <p>
+                            <a href="https://gitter.im/tdt/core" target="_blank" class="footer"><i class="fa fa-comments"></i> Gitter</a>
                         </p>
                     </div>
-                    <div class="col-md-3">
-                        <p class="rght">
-                            <a href="http://docs.thedatatank.com/4.0/installation" target="_blank" class="footer">Get Started</a>
+                    <div class="col-xs-6 col-md-4">
+                        <p>
+                            <a href="http://docs.thedatatank.com" target="_blank" class="footer"><i class="fa fa-book"></i> Documentation</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <p>
+                            <a href="http://docs.thedatatank.com/4.6/installation" target="_blank" class="footer"><i class="fa fa-road"></i> Get Started</a>
+                        </p>
+                    </div>
+                    <div class="col-xs-6 col-md-4">
+                        <p>
+                            <a href="http://demo.thedatatank.com/" target="_blank" class="footer"><i class="fa fa-eye"></i> Demo</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8">
+                        <p class="quote">
+                            <span class="title">Commercial Support</span>
+                            <span class="italic">Do you need support, a service level agreement, external hosting, extra source readers or any other service? Some of our core developers offer commercial services.</span>
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <p class="footerimg">
+                            <a href="http://weopendata.com/" target="_blank"><img src="images/weopendata.png"></a>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="footnote">
+                            Powered by <a href="http://www.openknowledge.be/" target="_blank" class="underline">Open Knowledge Belgium</a>. Source code freely available on <a class="underline" href="https://github.com/tdt/web" target="_blank">Github</a>.
                         </p>
                     </div>
                 </div>
@@ -257,53 +300,9 @@
         </div>
     </div>
 
-    <script type="text/javascript">
-        $('a[href^=#]').on("click",function(e){
-            var t= $(this.hash);
-            var t=t.length&&t||$('[name='+this.hash.slice(1)+']');
-            if(t.length){
-                var tOffset=t.offset().top;
-                $('html,body').animate({scrollTop:tOffset-20},'slow');
-                e.preventDefault();
-            }
-        });
-
-        $('#contact .button').on('click', function(e){
-            e.preventDefault();
-            $('.message').addClass('hide');
-
-            var form = $('#contact');
-            var name = $('#name', form);
-            var email = $('#email', form);
-            var text = $('#text', form);
-
-            if(name.val().length < 1){
-                name.focus();
-            }else if(email.val().length < 5){
-                email.focus();
-            }else{
-                $.ajax({
-                    url: 'email.php',
-                    method: 'post',
-                    data: {
-                        name: name.val(),
-                        email: email.val(),
-                        text: text.val()
-                    },
-                    success: function(e){
-                        name.val('');
-                        text.val('');
-                        email.val('');
-                        $('.message').removeClass('hide').show();
-                    },
-                    error: function(e){
-                        console.log(e);
-                    }
-                });
-            }
-
-        });
-    </script>
+    <script src="js/fancybox/source/jquery.fancybox.js"></script>
+    <script src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script src="js/app.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

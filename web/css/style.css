@@ -2852,7 +2852,9 @@ strong {
       height: 100px; }
     @media (min-width: 768px) {
       #footer .footerimg {
-        text-align: left; }
+        text-align: center; }
+        #footer .footerimg:nth-of-type(2n-1) {
+          text-align: center; }
         #footer .footerimg img {
           padding: 0;
           margin: 0; } }

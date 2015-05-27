@@ -225,6 +225,10 @@ strong{
         font-size: 1.5em;
     }
 
+    .flink {
+        white-space: nowrap;
+    }
+
     .footnote {
         padding-top: 1em;
         font-size: 1em;
@@ -378,6 +382,8 @@ strong{
     .sup-datatypes > div {
         padding-top: 3px;
         padding-bottom: 3px;
+        padding-right: 0px;
+        white-space: nowrap;
     }
 }
 

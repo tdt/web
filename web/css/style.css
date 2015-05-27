@@ -2818,6 +2818,7 @@ strong {
   #footer .quote {
     margin-top: 0;
     margin-bottom: 2em;
+    margin-top: 20px;
     padding: 1em;
     border: 1px solid #ffffff;
     border-radius: 5px;
@@ -2829,6 +2830,7 @@ strong {
       font-weight: bold; }
   #footer .footerimg {
     padding-bottom: 1em;
+    margin-top: 20px;
     text-align: center; }
     #footer .footerimg img {
       height: 100px; }

@@ -542,11 +542,6 @@ p.tagline{
     }
 }
 
-.tdt-button-inv {
-    color: $color-blue;
-    border-color: $color-blue;
-}
-
 .underline {
     text-decoration: underline;
 }
@@ -568,6 +563,10 @@ p.mrgn-2{
 
 img.quote{
     margin-right:33px;
+}
+
+.hide{
+    display: none;
 }
 
 form input{
@@ -609,20 +608,7 @@ form #name{
     margin-top:20px;
 }
 
-.message{
-    color: $color-white;
-    margin-left: 10px;
-}
-
-.hide{
-    display: none;
-}
-
 @media (max-width: 991px) {
-    p.txt, form input{
-        margin-left:20px;
-    }
-
     p.tagline{
         font-size:16px;
         margin-right: 20px;
@@ -675,12 +661,6 @@ form #name{
         font-size:14px;
         margin: 10px 20px 0px 20px;
         padding: 8px 14px 8px 14px;
-    }
-
-    #projects{
-        .logo{
-            margin-bottom: 5px;
-        }
     }
 }
 

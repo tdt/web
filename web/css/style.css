@@ -3031,10 +3031,6 @@ p.tagline {
   .tdt-button:not(:first-of-type) {
     margin-left: 20px; }
 
-.tdt-button-inv {
-  color: #1f3c47;
-  border-color: #1f3c47; }
-
 .underline {
   text-decoration: underline; }
 
@@ -3052,6 +3048,9 @@ p.mrgn-2 {
 
 img.quote {
   margin-right: 33px; }
+
+.hide {
+  display: none; }
 
 form input {
   background: transparent;
@@ -3088,17 +3087,7 @@ form textarea {
 form #name {
   margin-top: 20px; }
 
-.message {
-  color: #ffffff;
-  margin-left: 10px; }
-
-.hide {
-  display: none; }
-
 @media (max-width: 991px) {
-  p.txt, form input {
-    margin-left: 20px; }
-
   p.tagline {
     font-size: 16px;
     margin-right: 20px; }
@@ -3137,10 +3126,7 @@ form #name {
   input.tdt-button {
     font-size: 14px;
     margin: 10px 20px 0px 20px;
-    padding: 8px 14px 8px 14px; }
-
-  #projects .logo {
-    margin-bottom: 5px; } }
+    padding: 8px 14px 8px 14px; } }
 .row-no-padding-r [class*="col-"] {
   padding-right: 0 !important; }
 

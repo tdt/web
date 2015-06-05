@@ -91,7 +91,7 @@ $(function() {
             timestr =  "(" + timeLeft + " day left!)"
         }
         $('#timeleft').html(timestr);
-        
+
         var dateString = monthNames[dd.getMonth()] + " " + dd.getDate() + ", " + dd.getFullYear();
         $('#milestone-date').html(dateString);
         $('#milestone-date').parent().removeClass("hide");

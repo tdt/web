@@ -84,7 +84,14 @@ $(function() {
         var dd = new Date(ms.due_on);
         var timeLeft = dd - now;
         timeLeft = Math.ceil(timeLeft / 1000 / 3600 / 24);
-        $('#timeleft').html("(" + timeLeft + " days left!)");
+        var timestr;
+        if(timeLeft != 1) {
+            timestr = "(" + timeLeft + " days left!)"
+        } else {
+            timestr =  "(" + timeLeft + " day left!)"
+        }
+        $('#timeleft').html(timestr);
+        
         var dateString = monthNames[dd.getMonth()] + " " + dd.getDate() + ", " + dd.getFullYear();
         $('#milestone-date').html(dateString);
         $('#milestone-date').parent().removeClass("hide");
@@ -94,7 +101,7 @@ $(function() {
 
         var progressPercent = ms.closed_issues / (ms.open_issues + ms.closed_issues) * 100;
         progressPercent = Math.floor(progressPercent);
-        $('#milestone-progress').css('width', progressPercent +'%');
+        $('#milestone-progress').css('width', (progressPercent+1) +'%');
         $('#milestone-progress').html('Issues: ' + ms.open_issues + ' open, ' + ms.closed_issues + ' closed');
         $('#milestone-progress').parent().on('click', function() {
             window.open(ms.html_url);
